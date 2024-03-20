@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('patient_name');
             $table->string('patient_phone');
             $table->string('patient_email')->nullable();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
