@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class AppointmentRequest extends FormRequest
+class DoctorUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,14 +25,11 @@ class AppointmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'appointment_date' => 'required|date',
-            'doctor_id' => 'required|exists:employees,id',
-            'patient_id' => 'required|exists:patients,id',
-            'consultation_notes' => 'nullable|string',
-            // Add other validation rules as needed
+            'name' => 'required|string|max:255',
+            'address' => 'nullable|string|max:255',
+            'phone' => 'required|string|max:20',
         ];
     }
-
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(

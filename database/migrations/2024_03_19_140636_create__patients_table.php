@@ -13,10 +13,15 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('patient_name');
-            $table->string('patient_phone');
-            $table->string('patient_email')->nullable();
+            $table->string('name');
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->enum('sex', ['male', 'female']);
+            $table->string('blood_group')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->integer('age')->nullable();
+            $table->timestamp('registration_time')->useCurrent();
             $table->timestamps();
         });
     }

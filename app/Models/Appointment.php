@@ -9,7 +9,7 @@ class Appointment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['appointment_date', 'doctor_id', 'patient_id', 'consultation_notes'];
+    protected $fillable = ['date', 'status'];
 
     public function doctor()
     {
@@ -23,6 +23,6 @@ class Appointment extends Model
 
     public function consultation()
     {
-        return $this->hasOne(Consultation::class);
+        return $this->belongsTo(Consultation::class);
     }
 }

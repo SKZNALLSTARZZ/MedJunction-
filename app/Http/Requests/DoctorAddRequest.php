@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class PatientRequest extends FormRequest
+class DoctorAddRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,12 @@ class PatientRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'patient_name' => 'required|string|max:255',
-            'patient_phone' => 'required|string|max:20',
-            'patient_email' => 'nullable|email|max:255',
+            'name' => 'required|string|max:255',
+            'address' => 'nullable|string|max:255',
+            'phone' => 'required|string|max:20',
+            'department_id' => 'required|exists:departments,id',
+            'speciality_id' => 'required|exists:specialities,id',
+            'user_id' => 'required|exists:users,id',
         ];
     }
     protected function failedValidation(Validator $validator)

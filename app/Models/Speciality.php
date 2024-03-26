@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Specialty extends Model
+class Speciality extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['specialty_name'];
+    protected $fillable = ['name','description'];
 
     public function doctors()
     {
-        return $this->belongsToMany(Employee::class, 'doctor_specialties');
+        return $this->belongsToMany(Employee::class);
     }
 }

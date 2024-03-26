@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AppointmentRequest;
-use Exception;
+use App\Http\Requests\AppointmentAddRequest;
+use App\Http\Requests\AppointmentUpdateRequest;
 
 class AppointmentController extends Controller
 {
@@ -30,7 +31,7 @@ class AppointmentController extends Controller
         }
     }
 
-    public function store(AppointmentRequest $request)
+    public function store(AppointmentAddRequest $request)
     {
         try {
             $appointment = new Appointment();
@@ -47,7 +48,7 @@ class AppointmentController extends Controller
         }
     }
 
-    public function update(AppointmentRequest $request, $id)
+    public function update(AppointmentUpdateRequest $request, $id)
     {
         try {
             $appointment = Appointment::find($id);

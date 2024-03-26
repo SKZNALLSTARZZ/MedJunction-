@@ -9,15 +9,20 @@ class Department extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['department_name'];
+    protected $fillable = [
+        'name',
+        'description',
+    ];
 
-    public function employees()
+    public function Doctors()
     {
-        return $this->hasMany(Employee::class);
+        return $this->hasMany(Doctor::class);
     }
 
-    public function expenses()
+    public function Nurses()
     {
-        return $this->hasMany(Expense::class);
+        return $this->hasMany(Nurse::class);
     }
+
+
 }

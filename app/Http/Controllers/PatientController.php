@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Patient;
-use App\Http\Requests\PatientRequest;
+use App\Http\Requests\PatientUpdateRequest;
+use App\Http\Requests\PatientAddRequest;
 use Exception;
 
 class PatientController extends Controller
@@ -29,7 +30,7 @@ class PatientController extends Controller
         }
     }
 
-    public function store(PatientRequest $request)
+    public function store(PatientAddRequest $request)
     {
         try {
             $patient = new Patient();
@@ -46,7 +47,7 @@ class PatientController extends Controller
         }
     }
 
-    public function update(PatientRequest $request, $id)
+    public function update(PatientUpdateRequest $request, $id)
     {
         try {
             $patient = Patient::find($id);
