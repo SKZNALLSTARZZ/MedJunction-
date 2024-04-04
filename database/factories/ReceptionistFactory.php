@@ -20,7 +20,6 @@ class ReceptionistFactory extends Factory
         return [
             'name' => $this->faker->name,
             'phone' => $this->faker->phoneNumber,
-            'email' => $this->faker->unique()->safeEmail,
             'address' => $this->faker->address,
             'user_id' => User::factory(),
         ];

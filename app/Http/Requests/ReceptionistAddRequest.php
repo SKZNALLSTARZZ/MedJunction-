@@ -27,7 +27,6 @@ class ReceptionistAddRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'phone' => 'nullable|string|max:20',
-            'email' => 'required|email|max:255|unique:table_name,email_column',
             'address' => 'nullable|string|max:255',
             'user_id' => 'required|exists:users,id',
         ];

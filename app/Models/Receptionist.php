@@ -13,7 +13,6 @@ class Receptionist extends Model
     protected $fillable = [
         'name',
         'phone',
-        'email',
         'address',
         'user_id',
     ];
