@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Nurse;
+use Exception;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NurseAddRequest;
@@ -57,7 +58,7 @@ class NurseController extends Controller
             return response()->json([
                 'status_code' => 200,
                 'status_message' => 'Nurse updated successfully',
-                'data' => $doctor
+                'data' => $nurse
             ]);
         } catch (ModelNotFoundException $e) {
             return response()->json(['error' => 'Nurse not found.'], 404);

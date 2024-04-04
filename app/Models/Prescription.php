@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Consultation;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Prescription extends Model
 {
     use HasFactory;
+
+
     protected $fillable = [
         'state',
         'symptom',
@@ -15,4 +18,9 @@ class Prescription extends Model
         'medicine',
         'validity',
     ];
+
+    public function consultation()
+    {
+        return $this->belongsTo(Consultation::class);
+    }
 }

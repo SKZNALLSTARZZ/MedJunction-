@@ -20,8 +20,12 @@ return new class extends Migration
             $table->enum('sex', ['male', 'female']);
             $table->string('blood_group')->nullable();
             $table->date('birthdate')->nullable();
+            $table->float('height')->nullable();
+            $table->float('weight')->nullable();
             $table->integer('age')->nullable();
-            $table->timestamp('registration_time')->useCurrent();
+            $table->text('allergies')->nullable();
+            $table->text('habits')->nullable();
+            $table->text('medical_history')->nullable();
             $table->timestamps();
         });
     }

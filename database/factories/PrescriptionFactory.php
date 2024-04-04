@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Consultation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,9 +20,10 @@ class PrescriptionFactory extends Factory
         return [
             'state' => $this->faker->randomElement(['pending', 'approved', 'rejected']),
             'symptom' => $this->faker->sentence,
-            'advice' => $this->faker->paragraph,
+            'advice' => substr($this->faker->paragraph, 0, 255),
             'medicine' => $this->faker->words(3, true),
             'validity' => $this->faker->randomElement(['1 week', '2 weeks', '1 month']),
+            'consultation_id' => Consultation::Factory(),
         ];
     }
 }

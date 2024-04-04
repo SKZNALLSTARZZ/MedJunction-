@@ -6,12 +6,18 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Nurse;
 use App\Models\Doctor;
+use App\Models\Invoice;
 use App\Models\Patient;
+use App\Models\Payment;
+use App\Models\Service;
+use App\Models\Medicine;
 use App\Models\Department;
+use App\Models\Pharmacist;
 use App\Models\Speciality;
 use App\Models\Appointment;
 use App\Models\Consultation;
 use App\Models\Prescription;
+use App\Models\Receptionist;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -62,11 +68,39 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Seed prescriptions
-        $prescriptions = Prescription::factory()->count(15)->create();
+        $prescriptions = Prescription::factory()->count(15)->create([
+            'consultation_id' => $consultations->random(),
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Seed receptionists
+        $receptionists = Receptionist::factory()->count(15)->create([
+            'user_id' => $users->random(),
+        ]);
+
+        // Seed pharmacists
+        $pharmacists = Pharmacist::factory()->count(15)->create([
+            'user_id' => $users->random(),
+        ]);
+
+        // Seed payments
+        $payments = Payment::factory()->count(15)->create([
+            'consultation_id' => $consultations->random(),
+            'receptionist_id' => $receptionists->random(),
+        ]);
+
+        // Seed invoices
+        $invoices = Invoice::factory()->count(10)->create([
+            'payment_id' => $payments->random(),
+        ]);
+
+        // Seed services
+        $services = Service::factory()->count(15)->create([
+            'speciality_id' => $specialities->random(),
+        ]);
+
+        // Seed medicines
+        $medicines = Medicine::factory()->count(15)->create([
+            'pharmacist_id' => $pharmacists->random(),
+        ]);
     }
 }

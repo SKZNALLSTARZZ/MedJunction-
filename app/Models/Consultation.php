@@ -27,11 +27,6 @@ class Consultation extends Model
         return $this->hasOne(Patient::class);
     }
 
-    public function prescription()
-    {
-        return $this->hasOne(Prescription::class);
-    }
-
     public function appointment()
     {
         return $this->hasOne(Appointment::class);

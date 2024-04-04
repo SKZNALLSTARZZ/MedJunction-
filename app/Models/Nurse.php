@@ -12,7 +12,8 @@ class Nurse extends Model
         'name',
         'address',
         'phone',
-        'user_id'
+        'user_id',
+        'department_id'
     ];
 
     public function user()

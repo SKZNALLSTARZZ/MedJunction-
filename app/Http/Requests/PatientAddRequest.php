@@ -27,12 +27,17 @@ class PatientAddRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'address' => 'nullable|string|max:255',
-            'phone' => 'required|string|max:20',
+            'phone' => 'nullable|string|max:20',
             'user_id' => 'required|exists:users,id',
             'sex' => 'required|in:male,female',
-            'blood_group' => 'required|string|max:5',
-            'birthdate' => 'required|date',
-            'age' => 'required|integer|min:0',
+            'blood_group' => 'nullable|string|max:255',
+            'birthdate' => 'nullable|date',
+            'height' => 'nullable|numeric|min:0',
+            'weight' => 'nullable|numeric|min:0',
+            'age' => 'nullable|integer|min:0',
+            'allergies' => 'nullable|string',
+            'habits' => 'nullable|string',
+            'medical_history' => 'nullable|string',
         ];
     }
     protected function failedValidation(Validator $validator)

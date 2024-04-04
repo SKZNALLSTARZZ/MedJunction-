@@ -19,13 +19,18 @@ class PatientFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'phone' => $this->faker->phoneNumber,
             'address' => $this->faker->address,
-            'sex' => $this->faker->randomElement(['male', 'female']),
-            'blood_group' => $this->faker->randomElement(['A+', 'B+', 'AB+', 'O+', 'A-', 'B-', 'AB-', 'O-']),
-            'birthdate' => $this->faker->date(),
-            'age' => $this->faker->numberBetween(18, 90),
+            'phone' => $this->faker->phoneNumber,
             'user_id' => \App\Models\User::factory(),
+            'sex' => $this->faker->randomElement(['male', 'female']),
+            'blood_group' => $this->faker->randomElement(['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']),
+            'birthdate' => $this->faker->date(),
+            'height' => $this->faker->randomFloat(2, 100, 250),
+            'weight' => $this->faker->randomFloat(2, 20, 200),
+            'age' => $this->faker->numberBetween(1, 100),
+            'allergies' => $this->faker->text,
+            'habits' => $this->faker->text,
+            'medical_history' => $this->faker->text,
         ];
     }
 }

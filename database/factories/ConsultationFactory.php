@@ -26,7 +26,6 @@ class ConsultationFactory extends Factory
             'doctor_id' => Doctor::factory(),
             'nurse_id' => Nurse::factory(),
             'patient_id' => Patient::factory(),
-            'prescription_id' => Prescription::factory(),
             'appointment_id' => Appointment::factory(),
         ];
     }

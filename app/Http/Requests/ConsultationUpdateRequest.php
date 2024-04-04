@@ -2,7 +2,10 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class ConsultationUpdateRequest extends FormRequest
 {
@@ -24,5 +27,14 @@ class ConsultationUpdateRequest extends FormRequest
         return [
             'remarks' => 'required|string|max:255',
         ];
+    }
+    protected function failedValidation(Validator $validator)
+    {
+        throw new HttpResponseException(
+            response()->json([
+                'message' => 'Validation error',
+                'errors' => $validator->errors(),
+            ], JsonResponse::HTTP_UNPROCESSABLE_ENTITY)
+        );
     }
 }
