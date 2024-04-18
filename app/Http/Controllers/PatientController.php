@@ -2,19 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Patient;
-use App\Http\Requests\PatientUpdateRequest;
-use App\Http\Requests\PatientAddRequest;
 use Exception;
+use App\Repositories\PatientRepository;
+use App\Models\Patient;
+use Illuminate\Http\Request;
+use App\Http\Requests\PatientAddRequest;
+use App\Http\Requests\PatientUpdateRequest;
 
 class PatientController extends Controller
 {
+    private $patientRepository;
+    public function __construct(PatientRepository $patienRepository) {
+        $this->patientRepository = $patienRepository;
+    }
+
     public function index()
     {
         try {
-            $patients = Patient::all();
-            return response()->json(['data' => $patients]);
+            $patients = $this->patientRepository->all();
+            return response()->json($patients);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
+    public function count()
+    {
+        try {
+            $daily = $this->patientRepository->dailyCount();
+            $monthly = $this->patientRepository->monthlyCount();
+            $yearly = $this->patientRepository->yearlyCount();
+
+            $res = [
+                'daily' => $daily,
+                'monthly' => $monthly,
+                'yearly' => $yearly
+            ];
+            return response()->json($res);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }

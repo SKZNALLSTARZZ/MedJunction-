@@ -45,7 +45,10 @@ Route::apiResource('Department', DepartmentController::class);
 
 Route::apiResource('Prescription', PrescriptionController::class);
 
-Route::apiResource('Patient', PatientController::class);
+Route::prefix('Patient')->group(function () {
+    Route::apiResource('/', PatientController::class);
+    Route::get('/Count', [PatientController::class, 'count']);
+});
 
 Route::apiResource('Doctor', DoctorController::class);
 
@@ -62,4 +65,5 @@ Route::apiResource('Invoice', InvoiceController::class);
 Route::apiResource('Medicine', MedicineController::class);
 
 Route::apiResource('Service', ServiceController::class);
+
 
