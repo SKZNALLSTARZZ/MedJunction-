@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('address')->nullable();
             $table->string('phone')->nullable();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->enum('sex', ['male', 'female']);
             $table->string('blood_group')->nullable();
             $table->date('birthdate')->nullable();

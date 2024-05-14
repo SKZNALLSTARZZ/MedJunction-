@@ -43,9 +43,14 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Seed patients
-        $patients = Patient::factory()->count(10)->create([
-            'user_id' => $users->random(),
-        ]);
+        $userIds = User::where('type', 'patient')->pluck('id');
+
+        // Loop through each user ID and create a patient
+        $patients = collect();
+        $userIds->each(function ($userId) use ($patients) {
+            $patient = Patient::factory()->create(['user_id' => $userId]);
+            $patients->push($patient);
+        });
 
         // Seed nurses
         $nurses = Nurse::factory()->count(5)->create([

@@ -7,7 +7,47 @@ use App\Models\Patient;
 class  PatientRepository{
 
     public function all(){
-        return Patient::with('user:id,email,img_url')->get();
+        $patients = Patient::with('user:id,email,img_url')->get();
+
+        foreach ($patients as $patient) {
+            $imageData = null;
+            if ($patient->user && $patient->user->img_url) {
+                $imagePath = storage_path('app/public/uploads/' . basename($patient->user->img_url));
+                if (file_exists($imagePath)) {
+                    $imageData = base64_encode(file_get_contents($imagePath));
+                }else{
+                    $imageData = "No DATA!";
+                }
+            }
+            $patient->img_data = $imageData;
+        }
+
+        return $patients;
+    }
+
+    public function Single($id){
+        $query = Patient::with('user:id,email,img_url');
+
+        if ($id !== null) {
+            $query->where('id', $id);
+        }
+
+        $patient = $query->first();
+
+        if ($patient) {
+            $imageData = null;
+            if ($patient->user && $patient->user->img_url) {
+                $imagePath = storage_path('app/public/uploads/' . basename($patient->user->img_url));
+                if (file_exists($imagePath)) {
+                    $imageData = base64_encode(file_get_contents($imagePath));
+                } else {
+                    $imageData = "No DATA!";
+                }
+            }
+            $patient->img_data = $imageData;
+        }
+
+        return $patient;
     }
 
     public function dailyCount(){

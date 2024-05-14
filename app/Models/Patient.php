@@ -34,4 +34,11 @@ class Patient extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    protected static function booted()
+    {
+        static::deleting(function ($patient) {
+            $patient->user->delete();
+        });
+    }
 }

@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Exception;
-use App\Repositories\PatientRepository;
 use App\Models\Patient;
 use Illuminate\Http\Request;
+use App\Repositories\UserRepository;
+use App\Repositories\PatientRepository;
 use App\Http\Requests\PatientAddRequest;
 use App\Http\Requests\PatientUpdateRequest;
+use App\Services\TwilioService;
+use App\Services\PasswordService;
 
 class PatientController extends Controller
 {
     private $patientRepository;
-    public function __construct(PatientRepository $patienRepository) {
+    public function __construct(PatientRepository $patienRepository, UserRepository $userRepository) {
         $this->patientRepository = $patienRepository;
+        $this->userRepository = $userRepository;
     }
 
     public function index()
@@ -47,8 +51,8 @@ class PatientController extends Controller
     public function show($id)
     {
         try {
-            $patient = Patient::findOrFail($id);
-            return response()->json(['data' => $patient]);
+            $patient = $this->patientRepository->Single($id);
+            return response()->json([$patient]);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
@@ -57,9 +61,21 @@ class PatientController extends Controller
     public function store(PatientAddRequest $request)
     {
         try {
+            $password = PasswordService::generateRandomPassword(8);
+            $userData = [
+                'type' => $request->input('type'),
+                'img_url' => $request->input('img_url'),
+                'email' => $request->input('email'),
+                'password' => bcrypt($password),
+            ];
+            $user = $this->userRepository->createUser($userData);
+
             $patient = new Patient();
             $patient->fill($request->validated());
+            $patient->user_id = $user->id;
             $patient->save();
+
+            TwilioService::sendMessage($patient->phone, "Your password is: $password");
 
             return response()->json([
                 'status_code' => 201,

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\NurseController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\InvoiceController;
@@ -46,7 +47,7 @@ Route::apiResource('Department', DepartmentController::class);
 Route::apiResource('Prescription', PrescriptionController::class);
 
 Route::prefix('Patient')->group(function () {
-    Route::apiResource('/', PatientController::class);
+    Route::apiResource('/patients', PatientController::class);
     Route::get('/Count', [PatientController::class, 'count']);
 });
 
@@ -65,5 +66,9 @@ Route::apiResource('Invoice', InvoiceController::class);
 Route::apiResource('Medicine', MedicineController::class);
 
 Route::apiResource('Service', ServiceController::class);
+
+Route::post('/upload', [FileController::class, 'upload']);
+
+
 
 

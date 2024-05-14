@@ -21,7 +21,7 @@ class PatientFactory extends Factory
             'name' => $this->faker->name,
             'address' => $this->faker->address,
             'phone' => $this->faker->phoneNumber,
-            'user_id' => \App\Models\User::factory(),
+            'user_id' => User::inRandomOrder()->first()->id,
             'sex' => $this->faker->randomElement(['Male', 'Female']),
             'blood_group' => $this->faker->randomElement(['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']),
             'birthdate' => $this->faker->date(),
