@@ -1,0 +1,11 @@
+{
+    "name": "MedicinePrescription",
+    "alias": "medicineprescription",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MedicinePrescription\\Providers\\MedicinePrescriptionServiceProvider"
+    ],
+    "files": []
+}

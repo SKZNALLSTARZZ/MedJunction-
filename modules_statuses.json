@@ -20,5 +20,6 @@
     "Appointment": true,
     "Consultation": true,
     "User": true,
-    "FileManagement": true
+    "FileManagement": true,
+    "MedicinePrescription": true
 }
