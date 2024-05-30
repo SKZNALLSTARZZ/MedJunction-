@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/medicalhistory",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\MedicalHistory\\": "app/",
+            "Modules\\MedicalHistory\\Database\\Factories\\": "database/factories/",
+            "Modules\\MedicalHistory\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\MedicalHistory\\Tests\\": "tests/"
+        }
+    }
+}

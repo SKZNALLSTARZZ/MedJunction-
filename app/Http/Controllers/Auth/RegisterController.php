@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use Exception;
-use App\Models\User;
 use Illuminate\Http\Request;
+use Modules\User\Entities\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
@@ -21,14 +21,14 @@ class RegisterController extends Controller
         try {
 
             $validatedData = $request->validate([
-                'name' => 'required|string|max:255',
+                'role' => 'required|string|max:100',
                 'email' => 'required|string|email|max:255|unique:users',
                 'password' => 'required|string|min:6',
             ]);
 
 
             $user = User::create([
-                'name' => $validatedData['name'],
+                'role' => $validatedData['role'],
                 'email' => $validatedData['email'],
                 'password' => Hash::make($validatedData['password']),
             ]);

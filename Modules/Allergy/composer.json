@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/allergy",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Allergy\\": "app/",
+            "Modules\\Allergy\\Database\\Factories\\": "database/factories/",
+            "Modules\\Allergy\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Allergy\\Tests\\": "tests/"
+        }
+    }
+}

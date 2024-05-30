@@ -1,0 +1,11 @@
+{
+    "name": "Allergy",
+    "alias": "allergy",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Allergy\\Providers\\AllergyServiceProvider"
+    ],
+    "files": []
+}

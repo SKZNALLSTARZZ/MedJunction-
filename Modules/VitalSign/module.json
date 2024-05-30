@@ -1,0 +1,11 @@
+{
+    "name": "VitalSign",
+    "alias": "vitalsign",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\VitalSign\\Providers\\VitalSignServiceProvider"
+    ],
+    "files": []
+}

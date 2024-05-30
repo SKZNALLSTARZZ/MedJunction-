@@ -1,0 +1,11 @@
+{
+    "name": "Receptionist",
+    "alias": "receptionist",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Receptionist\\Providers\\ReceptionistServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/vitalsign",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\VitalSign\\": "app/",
+            "Modules\\VitalSign\\Database\\Factories\\": "database/factories/",
+            "Modules\\VitalSign\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\VitalSign\\Tests\\": "tests/"
+        }
+    }
+}

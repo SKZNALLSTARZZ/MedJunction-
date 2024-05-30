@@ -36,6 +36,7 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'c72349b1fe8d0deeedd3a52e8aa814d8' => __DIR__ . '/..' . '/mockery/mockery/library/helpers.php',
         'ce9671a430e4846b44e1c68c7611f9f5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
+        '9f394da3192a168c4633675768d80428' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/helpers.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
     );
@@ -47,6 +48,7 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         ),
         'W' => 
         array (
+            'Wikimedia\\Composer\\Merge\\V2\\' => 28,
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
@@ -112,11 +114,101 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         ),
         'N' => 
         array (
+            'Nwidart\\Modules\\' => 16,
             'NunoMaduro\\Collision\\' => 21,
         ),
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Modules\\VitalSign\\Tests\\' => 24,
+            'Modules\\VitalSign\\Database\\Seeders\\' => 35,
+            'Modules\\VitalSign\\Database\\Factories\\' => 37,
+            'Modules\\VitalSign\\' => 18,
+            'Modules\\User\\Tests\\' => 19,
+            'Modules\\User\\Database\\Seeders\\' => 30,
+            'Modules\\User\\Database\\Factories\\' => 32,
+            'Modules\\User\\' => 13,
+            'Modules\\Treatment\\Tests\\' => 24,
+            'Modules\\Treatment\\Database\\Seeders\\' => 35,
+            'Modules\\Treatment\\Database\\Factories\\' => 37,
+            'Modules\\Treatment\\' => 18,
+            'Modules\\Speciality\\Tests\\' => 25,
+            'Modules\\Speciality\\Database\\Seeders\\' => 36,
+            'Modules\\Speciality\\Database\\Factories\\' => 38,
+            'Modules\\Speciality\\' => 19,
+            'Modules\\Service\\Tests\\' => 22,
+            'Modules\\Service\\Database\\Seeders\\' => 33,
+            'Modules\\Service\\Database\\Factories\\' => 35,
+            'Modules\\Service\\' => 16,
+            'Modules\\Receptionist\\Tests\\' => 27,
+            'Modules\\Receptionist\\Database\\Seeders\\' => 38,
+            'Modules\\Receptionist\\Database\\Factories\\' => 40,
+            'Modules\\Receptionist\\' => 21,
+            'Modules\\Prescription\\Tests\\' => 27,
+            'Modules\\Prescription\\Database\\Seeders\\' => 38,
+            'Modules\\Prescription\\Database\\Factories\\' => 40,
+            'Modules\\Prescription\\' => 21,
+            'Modules\\Pharmacist\\Tests\\' => 25,
+            'Modules\\Pharmacist\\Database\\Seeders\\' => 36,
+            'Modules\\Pharmacist\\Database\\Factories\\' => 38,
+            'Modules\\Pharmacist\\' => 19,
+            'Modules\\Payment\\Tests\\' => 22,
+            'Modules\\Payment\\Database\\Seeders\\' => 33,
+            'Modules\\Payment\\Database\\Factories\\' => 35,
+            'Modules\\Payment\\' => 16,
+            'Modules\\Patient\\Tests\\' => 22,
+            'Modules\\Patient\\Database\\Seeders\\' => 33,
+            'Modules\\Patient\\Database\\Factories\\' => 35,
+            'Modules\\Patient\\' => 16,
+            'Modules\\Nurse\\Tests\\' => 20,
+            'Modules\\Nurse\\Database\\Seeders\\' => 31,
+            'Modules\\Nurse\\Database\\Factories\\' => 33,
+            'Modules\\Nurse\\' => 14,
+            'Modules\\Medicine\\Tests\\' => 23,
+            'Modules\\Medicine\\Database\\Seeders\\' => 34,
+            'Modules\\Medicine\\Database\\Factories\\' => 36,
+            'Modules\\Medicine\\' => 17,
+            'Modules\\MedicalHistory\\Tests\\' => 29,
+            'Modules\\MedicalHistory\\Database\\Seeders\\' => 40,
+            'Modules\\MedicalHistory\\Database\\Factories\\' => 42,
+            'Modules\\MedicalHistory\\' => 23,
+            'Modules\\Invoice\\Tests\\' => 22,
+            'Modules\\Invoice\\Database\\Seeders\\' => 33,
+            'Modules\\Invoice\\Database\\Factories\\' => 35,
+            'Modules\\Invoice\\' => 16,
+            'Modules\\Habit\\Tests\\' => 20,
+            'Modules\\Habit\\Database\\Seeders\\' => 31,
+            'Modules\\Habit\\Database\\Factories\\' => 33,
+            'Modules\\Habit\\' => 14,
+            'Modules\\FileManagement\\Tests\\' => 29,
+            'Modules\\FileManagement\\Database\\Seeders\\' => 40,
+            'Modules\\FileManagement\\Database\\Factories\\' => 42,
+            'Modules\\FileManagement\\' => 23,
+            'Modules\\Doctor\\Tests\\' => 21,
+            'Modules\\Doctor\\Database\\Seeders\\' => 32,
+            'Modules\\Doctor\\Database\\Factories\\' => 34,
+            'Modules\\Doctor\\' => 15,
+            'Modules\\Diagnosis\\Tests\\' => 24,
+            'Modules\\Diagnosis\\Database\\Seeders\\' => 35,
+            'Modules\\Diagnosis\\Database\\Factories\\' => 37,
+            'Modules\\Diagnosis\\' => 18,
+            'Modules\\Department\\Tests\\' => 25,
+            'Modules\\Department\\Database\\Seeders\\' => 36,
+            'Modules\\Department\\Database\\Factories\\' => 38,
+            'Modules\\Department\\' => 19,
+            'Modules\\Consultation\\Tests\\' => 27,
+            'Modules\\Consultation\\Database\\Seeders\\' => 38,
+            'Modules\\Consultation\\Database\\Factories\\' => 40,
+            'Modules\\Consultation\\' => 21,
+            'Modules\\Appointment\\Tests\\' => 26,
+            'Modules\\Appointment\\Database\\Seeders\\' => 37,
+            'Modules\\Appointment\\Database\\Factories\\' => 39,
+            'Modules\\Appointment\\' => 20,
+            'Modules\\Allergy\\Tests\\' => 22,
+            'Modules\\Allergy\\Database\\Seeders\\' => 33,
+            'Modules\\Allergy\\Database\\Factories\\' => 35,
+            'Modules\\Allergy\\' => 16,
+            'Modules\\' => 8,
             'Mockery\\' => 8,
         ),
         'L' => 
@@ -184,6 +276,10 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'Wikimedia\\Composer\\Merge\\V2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src',
         ),
         'Whoops\\' => 
         array (
@@ -386,6 +482,10 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
+        'Nwidart\\Modules\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nwidart/laravel-modules/src',
+        ),
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
@@ -393,6 +493,362 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Modules\\VitalSign\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/VitalSign/tests',
+        ),
+        'Modules\\VitalSign\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/VitalSign/database/seeders',
+        ),
+        'Modules\\VitalSign\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/VitalSign/database/factories',
+        ),
+        'Modules\\VitalSign\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/VitalSign/app',
+        ),
+        'Modules\\User\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/User/tests',
+        ),
+        'Modules\\User\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/User/database/seeders',
+        ),
+        'Modules\\User\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/User/database/factories',
+        ),
+        'Modules\\User\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/User/app',
+        ),
+        'Modules\\Treatment\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Treatment/tests',
+        ),
+        'Modules\\Treatment\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Treatment/database/seeders',
+        ),
+        'Modules\\Treatment\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Treatment/database/factories',
+        ),
+        'Modules\\Treatment\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Treatment/app',
+        ),
+        'Modules\\Speciality\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Speciality/tests',
+        ),
+        'Modules\\Speciality\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Speciality/database/seeders',
+        ),
+        'Modules\\Speciality\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Speciality/database/factories',
+        ),
+        'Modules\\Speciality\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Speciality/app',
+        ),
+        'Modules\\Service\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Service/tests',
+        ),
+        'Modules\\Service\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Service/database/seeders',
+        ),
+        'Modules\\Service\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Service/database/factories',
+        ),
+        'Modules\\Service\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Service/app',
+        ),
+        'Modules\\Receptionist\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Receptionist/tests',
+        ),
+        'Modules\\Receptionist\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Receptionist/database/seeders',
+        ),
+        'Modules\\Receptionist\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Receptionist/database/factories',
+        ),
+        'Modules\\Receptionist\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Receptionist/app',
+        ),
+        'Modules\\Prescription\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Prescription/tests',
+        ),
+        'Modules\\Prescription\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Prescription/database/seeders',
+        ),
+        'Modules\\Prescription\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Prescription/database/factories',
+        ),
+        'Modules\\Prescription\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Prescription/app',
+        ),
+        'Modules\\Pharmacist\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Pharmacist/tests',
+        ),
+        'Modules\\Pharmacist\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Pharmacist/database/seeders',
+        ),
+        'Modules\\Pharmacist\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Pharmacist/database/factories',
+        ),
+        'Modules\\Pharmacist\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Pharmacist/app',
+        ),
+        'Modules\\Payment\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Payment/tests',
+        ),
+        'Modules\\Payment\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Payment/database/seeders',
+        ),
+        'Modules\\Payment\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Payment/database/factories',
+        ),
+        'Modules\\Payment\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Payment/app',
+        ),
+        'Modules\\Patient\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Patient/tests',
+        ),
+        'Modules\\Patient\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Patient/database/seeders',
+        ),
+        'Modules\\Patient\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Patient/database/factories',
+        ),
+        'Modules\\Patient\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Patient/app',
+        ),
+        'Modules\\Nurse\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Nurse/tests',
+        ),
+        'Modules\\Nurse\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Nurse/database/seeders',
+        ),
+        'Modules\\Nurse\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Nurse/database/factories',
+        ),
+        'Modules\\Nurse\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Nurse/app',
+        ),
+        'Modules\\Medicine\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Medicine/tests',
+        ),
+        'Modules\\Medicine\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Medicine/database/seeders',
+        ),
+        'Modules\\Medicine\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Medicine/database/factories',
+        ),
+        'Modules\\Medicine\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Medicine/app',
+        ),
+        'Modules\\MedicalHistory\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/MedicalHistory/tests',
+        ),
+        'Modules\\MedicalHistory\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/MedicalHistory/database/seeders',
+        ),
+        'Modules\\MedicalHistory\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/MedicalHistory/database/factories',
+        ),
+        'Modules\\MedicalHistory\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/MedicalHistory/app',
+        ),
+        'Modules\\Invoice\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Invoice/tests',
+        ),
+        'Modules\\Invoice\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Invoice/database/seeders',
+        ),
+        'Modules\\Invoice\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Invoice/database/factories',
+        ),
+        'Modules\\Invoice\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Invoice/app',
+        ),
+        'Modules\\Habit\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Habit/tests',
+        ),
+        'Modules\\Habit\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Habit/database/seeders',
+        ),
+        'Modules\\Habit\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Habit/database/factories',
+        ),
+        'Modules\\Habit\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Habit/app',
+        ),
+        'Modules\\FileManagement\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/FileManagement/tests',
+        ),
+        'Modules\\FileManagement\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/FileManagement/database/seeders',
+        ),
+        'Modules\\FileManagement\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/FileManagement/database/factories',
+        ),
+        'Modules\\FileManagement\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/FileManagement/app',
+        ),
+        'Modules\\Doctor\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Doctor/tests',
+        ),
+        'Modules\\Doctor\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Doctor/database/seeders',
+        ),
+        'Modules\\Doctor\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Doctor/database/factories',
+        ),
+        'Modules\\Doctor\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Doctor/app',
+        ),
+        'Modules\\Diagnosis\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Diagnosis/tests',
+        ),
+        'Modules\\Diagnosis\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Diagnosis/database/seeders',
+        ),
+        'Modules\\Diagnosis\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Diagnosis/database/factories',
+        ),
+        'Modules\\Diagnosis\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Diagnosis/app',
+        ),
+        'Modules\\Department\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Department/tests',
+        ),
+        'Modules\\Department\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Department/database/seeders',
+        ),
+        'Modules\\Department\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Department/database/factories',
+        ),
+        'Modules\\Department\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Department/app',
+        ),
+        'Modules\\Consultation\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Consultation/tests',
+        ),
+        'Modules\\Consultation\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Consultation/database/seeders',
+        ),
+        'Modules\\Consultation\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Consultation/database/factories',
+        ),
+        'Modules\\Consultation\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Consultation/app',
+        ),
+        'Modules\\Appointment\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Appointment/tests',
+        ),
+        'Modules\\Appointment\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Appointment/database/seeders',
+        ),
+        'Modules\\Appointment\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Appointment/database/factories',
+        ),
+        'Modules\\Appointment\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Appointment/app',
+        ),
+        'Modules\\Allergy\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Allergy/tests',
+        ),
+        'Modules\\Allergy\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Allergy/database/seeders',
+        ),
+        'Modules\\Allergy\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Allergy/database/factories',
+        ),
+        'Modules\\Allergy\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/Allergy/app',
+        ),
+        'Modules\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules',
         ),
         'Mockery\\' => 
         array (
@@ -542,24 +998,9 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Factories\\ConfigurationFactory' => __DIR__ . '/..' . '/laravel/pint/app/Factories/ConfigurationFactory.php',
         'App\\Factories\\ConfigurationResolverFactory' => __DIR__ . '/..' . '/laravel/pint/app/Factories/ConfigurationResolverFactory.php',
-        'App\\Http\\Controllers\\AppointmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/AppointmentController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
-        'App\\Http\\Controllers\\ConsultationController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConsultationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\DepartmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/DepartmentController.php',
-        'App\\Http\\Controllers\\DoctorController' => __DIR__ . '/../..' . '/app/Http/Controllers/DoctorController.php',
-        'App\\Http\\Controllers\\FileController' => __DIR__ . '/../..' . '/app/Http/Controllers/FileController.php',
-        'App\\Http\\Controllers\\InvoiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/InvoiceController.php',
-        'App\\Http\\Controllers\\MedicineController' => __DIR__ . '/../..' . '/app/Http/Controllers/MedicineController.php',
-        'App\\Http\\Controllers\\NurseController' => __DIR__ . '/../..' . '/app/Http/Controllers/NurseController.php',
-        'App\\Http\\Controllers\\PatientController' => __DIR__ . '/../..' . '/app/Http/Controllers/PatientController.php',
-        'App\\Http\\Controllers\\PaymentController' => __DIR__ . '/../..' . '/app/Http/Controllers/PaymentController.php',
-        'App\\Http\\Controllers\\PharmacistController' => __DIR__ . '/../..' . '/app/Http/Controllers/PharmacistController.php',
-        'App\\Http\\Controllers\\PrescriptionController' => __DIR__ . '/../..' . '/app/Http/Controllers/PrescriptionController.php',
-        'App\\Http\\Controllers\\ReceptionistController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReceptionistController.php',
-        'App\\Http\\Controllers\\ServiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServiceController.php',
-        'App\\Http\\Controllers\\SpecialtyController' => __DIR__ . '/../..' . '/app/Http/Controllers/SpecialtyController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -570,44 +1011,7 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Http\\Requests\\ConsultationAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ConsultationAddRequest.php',
-        'App\\Http\\Requests\\ConsultationUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ConsultationUpdateRequest.php',
-        'App\\Http\\Requests\\DepartementRequest' => __DIR__ . '/../..' . '/app/Http/Requests/DepartementRequest.php',
-        'App\\Http\\Requests\\DoctorAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/DoctorAddRequest.php',
-        'App\\Http\\Requests\\DoctorUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/DoctorUpdateRequest.php',
-        'App\\Http\\Requests\\InvoiceAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/InvoiceAddRequest.php',
-        'App\\Http\\Requests\\InvoiceUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/InvoiceUpdateRequest.php',
-        'App\\Http\\Requests\\MedicineAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/MedicineAddRequest.php',
-        'App\\Http\\Requests\\MedicineUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/MedicineUpdateRequest.php',
-        'App\\Http\\Requests\\NurseAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/NurseAddRequest.php',
-        'App\\Http\\Requests\\NurseUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/NurseUpdateRequest.php',
-        'App\\Http\\Requests\\PatientAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PatientAddRequest.php',
-        'App\\Http\\Requests\\PatientUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PatientUpdateRequest.php',
-        'App\\Http\\Requests\\PaymentAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PaymentAddRequest.php',
-        'App\\Http\\Requests\\PaymentUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PaymentUpdateRequest.php',
-        'App\\Http\\Requests\\PharmacistAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PharmacistAddRequest.php',
-        'App\\Http\\Requests\\PharmacistUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PharmacistUpdateRequest.php',
-        'App\\Http\\Requests\\ReceptionistAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ReceptionistAddRequest.php',
-        'App\\Http\\Requests\\ReceptionistUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ReceptionistUpdateRequest.php',
-        'App\\Http\\Requests\\ServiceAddRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ServiceAddRequest.php',
-        'App\\Http\\Requests\\ServiceUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ServiceUpdateRequest.php',
-        'App\\Http\\Requests\\SpecialtyRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SpecialtyRequest.php',
         'App\\Kernel' => __DIR__ . '/..' . '/laravel/pint/app/Kernel.php',
-        'App\\Models\\Appointment' => __DIR__ . '/../..' . '/app/Models/Appointment.php',
-        'App\\Models\\Consultation' => __DIR__ . '/../..' . '/app/Models/Consultation.php',
-        'App\\Models\\Department' => __DIR__ . '/../..' . '/app/Models/Department.php',
-        'App\\Models\\Doctor' => __DIR__ . '/../..' . '/app/Models/Doctor.php',
-        'App\\Models\\Invoice' => __DIR__ . '/../..' . '/app/Models/Invoice.php',
-        'App\\Models\\Medicine' => __DIR__ . '/../..' . '/app/Models/Medicine.php',
-        'App\\Models\\Nurse' => __DIR__ . '/../..' . '/app/Models/Nurse.php',
-        'App\\Models\\Patient' => __DIR__ . '/../..' . '/app/Models/Patient.php',
-        'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/Models/Payment.php',
-        'App\\Models\\Pharmacist' => __DIR__ . '/../..' . '/app/Models/Pharmacist.php',
-        'App\\Models\\Prescription' => __DIR__ . '/../..' . '/app/Models/Prescription.php',
-        'App\\Models\\Receptionist' => __DIR__ . '/../..' . '/app/Models/Receptionist.php',
-        'App\\Models\\Service' => __DIR__ . '/../..' . '/app/Models/Service.php',
-        'App\\Models\\Speciality' => __DIR__ . '/../..' . '/app/Models/Speciality.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Output\\Concerns\\InteractsWithSymbols' => __DIR__ . '/..' . '/laravel/pint/app/Output/Concerns/InteractsWithSymbols.php',
         'App\\Output\\ProgressOutput' => __DIR__ . '/..' . '/laravel/pint/app/Output/ProgressOutput.php',
         'App\\Output\\SummaryOutput' => __DIR__ . '/..' . '/laravel/pint/app/Output/SummaryOutput.php',
@@ -622,8 +1026,6 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Repositories\\ConfigurationJsonRepository' => __DIR__ . '/..' . '/laravel/pint/app/Repositories/ConfigurationJsonRepository.php',
         'App\\Repositories\\GitPathsRepository' => __DIR__ . '/..' . '/laravel/pint/app/Repositories/GitPathsRepository.php',
-        'App\\Repositories\\PatientRepository' => __DIR__ . '/../..' . '/app/Repositories/PatientRepository.php',
-        'App\\Repositories\\UserRepository' => __DIR__ . '/../..' . '/app/Repositories/UserRepository.php',
         'App\\Services\\PasswordService' => __DIR__ . '/../..' . '/app/Services/PasswordService.php',
         'App\\Services\\TwilioService' => __DIR__ . '/../..' . '/app/Services/TwilioService.php',
         'App\\ValueObjects\\Issue' => __DIR__ . '/..' . '/laravel/pint/app/ValueObjects/Issue.php',
@@ -737,21 +1139,6 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-        'Database\\Factories\\AppointmentFactory' => __DIR__ . '/../..' . '/database/factories/AppointmentFactory.php',
-        'Database\\Factories\\ConsultationFactory' => __DIR__ . '/../..' . '/database/factories/ConsultationFactory.php',
-        'Database\\Factories\\DepartmentFactory' => __DIR__ . '/../..' . '/database/factories/DepartmentFactory.php',
-        'Database\\Factories\\DoctorFactory' => __DIR__ . '/../..' . '/database/factories/DoctorFactory.php',
-        'Database\\Factories\\InvoiceFactory' => __DIR__ . '/../..' . '/database/factories/InvoiceFactory.php',
-        'Database\\Factories\\MedicineFactory' => __DIR__ . '/../..' . '/database/factories/MedicineFactory.php',
-        'Database\\Factories\\NurseFactory' => __DIR__ . '/../..' . '/database/factories/NurseFactory.php',
-        'Database\\Factories\\PatientFactory' => __DIR__ . '/../..' . '/database/factories/PatientFactory.php',
-        'Database\\Factories\\PaymentFactory' => __DIR__ . '/../..' . '/database/factories/PaymentFactory.php',
-        'Database\\Factories\\PharmacistFactory' => __DIR__ . '/../..' . '/database/factories/PharmacistFactory.php',
-        'Database\\Factories\\PrescriptionFactory' => __DIR__ . '/../..' . '/database/factories/PrescriptionFactory.php',
-        'Database\\Factories\\ReceptionistFactory' => __DIR__ . '/../..' . '/database/factories/ReceptionistFactory.php',
-        'Database\\Factories\\ServiceFactory' => __DIR__ . '/../..' . '/database/factories/ServiceFactory.php',
-        'Database\\Factories\\SpecialityFactory' => __DIR__ . '/../..' . '/database/factories/SpecialityFactory.php',
-        'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
@@ -3535,6 +3922,188 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Mockery\\Undefined' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Undefined.php',
         'Mockery\\VerificationDirector' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationDirector.php',
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
+        'Modules\\Allergy\\Database\\Factories\\AllergyFactory' => __DIR__ . '/../..' . '/Modules/Allergy/database/factories/AllergyFactory.php',
+        'Modules\\Allergy\\Database\\Seeders\\AllergyDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Allergy/database/seeders/AllergyDatabaseSeeder.php',
+        'Modules\\Allergy\\Entities\\Allergy' => __DIR__ . '/../..' . '/Modules/Allergy/Entities/Allergy.php',
+        'Modules\\Allergy\\Http\\Controllers\\AllergyController' => __DIR__ . '/../..' . '/Modules/Allergy/app/Http/Controllers/AllergyController.php',
+        'Modules\\Allergy\\Http\\Requests\\AllergyAddRequest' => __DIR__ . '/../..' . '/Modules/Allergy/app/Http/Requests/AllergyAddRequest.php',
+        'Modules\\Allergy\\Http\\Requests\\AllergyUpdateRequest' => __DIR__ . '/../..' . '/Modules/Allergy/app/Http/Requests/AllergyUpdateRequest.php',
+        'Modules\\Allergy\\Providers\\AllergyServiceProvider' => __DIR__ . '/../..' . '/Modules/Allergy/app/Providers/AllergyServiceProvider.php',
+        'Modules\\Allergy\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Allergy/app/Providers/EventServiceProvider.php',
+        'Modules\\Allergy\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Allergy/app/Providers/RouteServiceProvider.php',
+        'Modules\\Appointment\\Database\\Seeders\\AppointmentDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Appointment/database/seeders/AppointmentDatabaseSeeder.php',
+        'Modules\\Appointment\\Entities\\Appointment' => __DIR__ . '/../..' . '/Modules/Appointment/Entities/Appointment.php',
+        'Modules\\Appointment\\Http\\Controllers\\AppointmentController' => __DIR__ . '/../..' . '/Modules/Appointment/app/Http/Controllers/AppointmentController.php',
+        'Modules\\Appointment\\Http\\Requests\\AppointmentAddRequest' => __DIR__ . '/../..' . '/Modules/Appointment/app/Http/Requests/AppointmentAddRequest.php',
+        'Modules\\Appointment\\Http\\Requests\\AppointmentUpdateRequest' => __DIR__ . '/../..' . '/Modules/Appointment/app/Http/Requests/AppointmentUpdateRequest.php',
+        'Modules\\Appointment\\Providers\\AppointmentServiceProvider' => __DIR__ . '/../..' . '/Modules/Appointment/app/Providers/AppointmentServiceProvider.php',
+        'Modules\\Appointment\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Appointment/app/Providers/EventServiceProvider.php',
+        'Modules\\Appointment\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Appointment/app/Providers/RouteServiceProvider.php',
+        'Modules\\Appointment\\database\\factories\\AppointmentFactory' => __DIR__ . '/../..' . '/Modules/Appointment/database/factories/AppointmentFactory.php',
+        'Modules\\Consultation\\Database\\Factories\\ConsultationFactory' => __DIR__ . '/../..' . '/Modules/Consultation/database/factories/ConsultationFactory.php',
+        'Modules\\Consultation\\Database\\Seeders\\ConsultationDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Consultation/database/seeders/ConsultationDatabaseSeeder.php',
+        'Modules\\Consultation\\Http\\Controllers\\ConsultationController' => __DIR__ . '/../..' . '/Modules/Consultation/app/Http/Controllers/ConsultationController.php',
+        'Modules\\Consultation\\Providers\\ConsultationServiceProvider' => __DIR__ . '/../..' . '/Modules/Consultation/app/Providers/ConsultationServiceProvider.php',
+        'Modules\\Consultation\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Consultation/app/Providers/EventServiceProvider.php',
+        'Modules\\Consultation\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Consultation/app/Providers/RouteServiceProvider.php',
+        'Modules\\Department\\Database\\Factories\\DepartmentFactory' => __DIR__ . '/../..' . '/Modules/Department/database/factories/DepartmentFactory.php',
+        'Modules\\Department\\Database\\Seeders\\DepartmentDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Department/database/seeders/DepartmentDatabaseSeeder.php',
+        'Modules\\Department\\Entities\\Department' => __DIR__ . '/../..' . '/Modules/Department/Entities/Department.php',
+        'Modules\\Department\\Http\\Controllers\\DepartmentController' => __DIR__ . '/../..' . '/Modules/Department/app/Http/Controllers/DepartmentController.php',
+        'Modules\\Department\\Http\\Requests\\DepartementRequest' => __DIR__ . '/../..' . '/Modules/Department/app/Http/Requests/DepartementRequest.php',
+        'Modules\\Department\\Providers\\DepartmentServiceProvider' => __DIR__ . '/../..' . '/Modules/Department/app/Providers/DepartmentServiceProvider.php',
+        'Modules\\Department\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Department/app/Providers/EventServiceProvider.php',
+        'Modules\\Department\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Department/app/Providers/RouteServiceProvider.php',
+        'Modules\\Diagnosis\\Database\\Factories\\DiagnosisFactory' => __DIR__ . '/../..' . '/Modules/Diagnosis/database/factories/DiagnosisFactory.php',
+        'Modules\\Diagnosis\\Database\\Seeders\\DiagnosisDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Diagnosis/database/seeders/DiagnosisDatabaseSeeder.php',
+        'Modules\\Diagnosis\\Entities\\Diagnosis' => __DIR__ . '/../..' . '/Modules/Diagnosis/Entities/Diagnosis.php',
+        'Modules\\Diagnosis\\Http\\Controllers\\DiagnosisController' => __DIR__ . '/../..' . '/Modules/Diagnosis/app/Http/Controllers/DiagnosisController.php',
+        'Modules\\Diagnosis\\Http\\Requests\\DiagnosisAddRequest' => __DIR__ . '/../..' . '/Modules/Diagnosis/app/Http/Requests/DiagnosisAddRequest.php',
+        'Modules\\Diagnosis\\Http\\Requests\\DiagnosisUpdateRequest' => __DIR__ . '/../..' . '/Modules/Diagnosis/app/Http/Requests/DiagnosisUpdateRequest.php',
+        'Modules\\Diagnosis\\Providers\\DiagnosisServiceProvider' => __DIR__ . '/../..' . '/Modules/Diagnosis/app/Providers/DiagnosisServiceProvider.php',
+        'Modules\\Diagnosis\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Diagnosis/app/Providers/EventServiceProvider.php',
+        'Modules\\Diagnosis\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Diagnosis/app/Providers/RouteServiceProvider.php',
+        'Modules\\Doctor\\Database\\Factories\\DoctorFactory' => __DIR__ . '/../..' . '/Modules/Doctor/database/factories/DoctorFactory.php',
+        'Modules\\Doctor\\Database\\Seeders\\DoctorDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Doctor/database/seeders/DoctorDatabaseSeeder.php',
+        'Modules\\Doctor\\Entities\\Doctor' => __DIR__ . '/../..' . '/Modules/Doctor/Entities/Doctor.php',
+        'Modules\\Doctor\\Http\\Controllers\\DoctorController' => __DIR__ . '/../..' . '/Modules/Doctor/app/Http/Controllers/DoctorController.php',
+        'Modules\\Doctor\\Http\\Requests\\DoctorAddRequest' => __DIR__ . '/../..' . '/Modules/Doctor/app/Http/Requests/DoctorAddRequest.php',
+        'Modules\\Doctor\\Http\\Requests\\DoctorUpdateRequest' => __DIR__ . '/../..' . '/Modules/Doctor/app/Http/Requests/DoctorUpdateRequest.php',
+        'Modules\\Doctor\\Providers\\DoctorServiceProvider' => __DIR__ . '/../..' . '/Modules/Doctor/app/Providers/DoctorServiceProvider.php',
+        'Modules\\Doctor\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Doctor/app/Providers/EventServiceProvider.php',
+        'Modules\\Doctor\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Doctor/app/Providers/RouteServiceProvider.php',
+        'Modules\\FileManagement\\Database\\Seeders\\FileManagementDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/FileManagement/database/seeders/FileManagementDatabaseSeeder.php',
+        'Modules\\FileManagement\\Http\\Controllers\\FileManagementController' => __DIR__ . '/../..' . '/Modules/FileManagement/app/Http/Controllers/FileManagementController.php',
+        'Modules\\FileManagement\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/FileManagement/app/Providers/EventServiceProvider.php',
+        'Modules\\FileManagement\\Providers\\FileManagementServiceProvider' => __DIR__ . '/../..' . '/Modules/FileManagement/app/Providers/FileManagementServiceProvider.php',
+        'Modules\\FileManagement\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/FileManagement/app/Providers/RouteServiceProvider.php',
+        'Modules\\Habit\\Database\\Seeders\\HabitDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Habit/database/seeders/HabitDatabaseSeeder.php',
+        'Modules\\Habit\\Entities\\Habit' => __DIR__ . '/../..' . '/Modules/Habit/Entities/Habit.php',
+        'Modules\\Habit\\Http\\Controllers\\HabitController' => __DIR__ . '/../..' . '/Modules/Habit/app/Http/Controllers/HabitController.php',
+        'Modules\\Habit\\Http\\Requests\\HabitAddRequest' => __DIR__ . '/../..' . '/Modules/Habit/app/Http/Requests/HabitAddRequest.php',
+        'Modules\\Habit\\Http\\Requests\\HabitUpdateRequest' => __DIR__ . '/../..' . '/Modules/Habit/app/Http/Requests/HabitUpdateRequest.php',
+        'Modules\\Habit\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Habit/app/Providers/EventServiceProvider.php',
+        'Modules\\Habit\\Providers\\HabitServiceProvider' => __DIR__ . '/../..' . '/Modules/Habit/app/Providers/HabitServiceProvider.php',
+        'Modules\\Habit\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Habit/app/Providers/RouteServiceProvider.php',
+        'Modules\\Invoice\\Database\\Factories\\InvoiceFactory' => __DIR__ . '/../..' . '/Modules/Invoice/database/factories/InvoiceFactory.php',
+        'Modules\\Invoice\\Database\\Seeders\\InvoiceDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Invoice/database/seeders/InvoiceDatabaseSeeder.php',
+        'Modules\\Invoice\\Entities\\Invoice' => __DIR__ . '/../..' . '/Modules/Invoice/Entities/Invoice.php',
+        'Modules\\Invoice\\Http\\Controllers\\InvoiceController' => __DIR__ . '/../..' . '/Modules/Invoice/app/Http/Controllers/InvoiceController.php',
+        'Modules\\Invoice\\Http\\Requests\\InvoiceAddRequest' => __DIR__ . '/../..' . '/Modules/Invoice/app/Http/Requests/InvoiceAddRequest.php',
+        'Modules\\Invoice\\Http\\Requests\\InvoiceUpdateRequest' => __DIR__ . '/../..' . '/Modules/Invoice/app/Http/Requests/InvoiceUpdateRequest.php',
+        'Modules\\Invoice\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Invoice/app/Providers/EventServiceProvider.php',
+        'Modules\\Invoice\\Providers\\InvoiceServiceProvider' => __DIR__ . '/../..' . '/Modules/Invoice/app/Providers/InvoiceServiceProvider.php',
+        'Modules\\Invoice\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Invoice/app/Providers/RouteServiceProvider.php',
+        'Modules\\MedicalHistory\\Database\\Seeders\\MedicalHistoryDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/MedicalHistory/database/seeders/MedicalHistoryDatabaseSeeder.php',
+        'Modules\\MedicalHistory\\Entities\\MedicalHistory' => __DIR__ . '/../..' . '/Modules/MedicalHistory/Entities/MedicalHistory.php',
+        'Modules\\MedicalHistory\\Http\\Controllers\\MedicalHistoryController' => __DIR__ . '/../..' . '/Modules/MedicalHistory/app/Http/Controllers/MedicalHistoryController.php',
+        'Modules\\MedicalHistory\\Http\\Requests\\MedicalHistoryAddRequest' => __DIR__ . '/../..' . '/Modules/MedicalHistory/app/Http/Requests/MedicalHistoryAddRequest.php',
+        'Modules\\MedicalHistory\\Http\\Requests\\MedicalHistoryUpdateRequest' => __DIR__ . '/../..' . '/Modules/MedicalHistory/app/Http/Requests/MedicalHistoryUpdateRequest.php',
+        'Modules\\MedicalHistory\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/MedicalHistory/app/Providers/EventServiceProvider.php',
+        'Modules\\MedicalHistory\\Providers\\MedicalHistoryServiceProvider' => __DIR__ . '/../..' . '/Modules/MedicalHistory/app/Providers/MedicalHistoryServiceProvider.php',
+        'Modules\\MedicalHistory\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/MedicalHistory/app/Providers/RouteServiceProvider.php',
+        'Modules\\Medicine\\Database\\Seeders\\MedicineDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Medicine/database/seeders/MedicineDatabaseSeeder.php',
+        'Modules\\Medicine\\Entities\\Medicine' => __DIR__ . '/../..' . '/Modules/Medicine/Entities/Medicine.php',
+        'Modules\\Medicine\\Http\\Controllers\\MedicineController' => __DIR__ . '/../..' . '/Modules/Medicine/app/Http/Controllers/MedicineController.php',
+        'Modules\\Medicine\\Http\\Requests\\MedicineAddRequest' => __DIR__ . '/../..' . '/Modules/Medicine/app/Http/Requests/MedicineAddRequest.php',
+        'Modules\\Medicine\\Http\\Requests\\MedicineUpdateRequest' => __DIR__ . '/../..' . '/Modules/Medicine/app/Http/Requests/MedicineUpdateRequest.php',
+        'Modules\\Medicine\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Medicine/app/Providers/EventServiceProvider.php',
+        'Modules\\Medicine\\Providers\\MedicineServiceProvider' => __DIR__ . '/../..' . '/Modules/Medicine/app/Providers/MedicineServiceProvider.php',
+        'Modules\\Medicine\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Medicine/app/Providers/RouteServiceProvider.php',
+        'Modules\\Nurse\\Database\\Factories\\NurseFactory' => __DIR__ . '/../..' . '/Modules/Nurse/database/factories/NurseFactory.php',
+        'Modules\\Nurse\\Database\\Seeders\\NurseDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Nurse/database/seeders/NurseDatabaseSeeder.php',
+        'Modules\\Nurse\\Entities\\Nurse' => __DIR__ . '/../..' . '/Modules/Nurse/Entities/Nurse.php',
+        'Modules\\Nurse\\Http\\Controllers\\NurseController' => __DIR__ . '/../..' . '/Modules/Nurse/app/Http/Controllers/NurseController.php',
+        'Modules\\Nurse\\Http\\Requests\\NurseAddRequest' => __DIR__ . '/../..' . '/Modules/Nurse/app/Http/Requests/NurseAddRequest.php',
+        'Modules\\Nurse\\Http\\Requests\\NurseUpdateRequest' => __DIR__ . '/../..' . '/Modules/Nurse/app/Http/Requests/NurseUpdateRequest.php',
+        'Modules\\Nurse\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Nurse/app/Providers/EventServiceProvider.php',
+        'Modules\\Nurse\\Providers\\NurseServiceProvider' => __DIR__ . '/../..' . '/Modules/Nurse/app/Providers/NurseServiceProvider.php',
+        'Modules\\Nurse\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Nurse/app/Providers/RouteServiceProvider.php',
+        'Modules\\Patient\\Database\\Factories\\PatientFactory' => __DIR__ . '/../..' . '/Modules/Patient/database/factories/PatientFactory.php',
+        'Modules\\Patient\\Database\\Seeders\\PatientDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Patient/database/seeders/PatientDatabaseSeeder.php',
+        'Modules\\Patient\\Entities\\Patient' => __DIR__ . '/../..' . '/Modules/Patient/Entities/Patient.php',
+        'Modules\\Patient\\Http\\Controllers\\PatientController' => __DIR__ . '/../..' . '/Modules/Patient/app/Http/Controllers/PatientController.php',
+        'Modules\\Patient\\Http\\Requests\\PatientAddRequest' => __DIR__ . '/../..' . '/Modules/Patient/app/Http/Requests/PatientAddRequest.php',
+        'Modules\\Patient\\Http\\Requests\\PatientUpdateRequest' => __DIR__ . '/../..' . '/Modules/Patient/app/Http/Requests/PatientUpdateRequest.php',
+        'Modules\\Patient\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Patient/app/Providers/EventServiceProvider.php',
+        'Modules\\Patient\\Providers\\PatientServiceProvider' => __DIR__ . '/../..' . '/Modules/Patient/app/Providers/PatientServiceProvider.php',
+        'Modules\\Patient\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Patient/app/Providers/RouteServiceProvider.php',
+        'Modules\\Patient\\Repositories\\PatientRepository' => __DIR__ . '/../..' . '/Modules/Patient/Repositories/PatientRepository.php',
+        'Modules\\Payment\\Database\\Factories\\PaymentFactory' => __DIR__ . '/../..' . '/Modules/Payment/database/factories/PaymentFactory.php',
+        'Modules\\Payment\\Database\\Seeders\\PaymentDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Payment/database/seeders/PaymentDatabaseSeeder.php',
+        'Modules\\Payment\\Entities\\Payment' => __DIR__ . '/../..' . '/Modules/Payment/Entities/Payment.php',
+        'Modules\\Payment\\Http\\Controllers\\PaymentController' => __DIR__ . '/../..' . '/Modules/Payment/app/Http/Controllers/PaymentController.php',
+        'Modules\\Payment\\Http\\Requests\\PaymentAddRequest' => __DIR__ . '/../..' . '/Modules/Payment/app/Http/Requests/PaymentAddRequest.php',
+        'Modules\\Payment\\Http\\Requests\\PaymentUpdateRequest' => __DIR__ . '/../..' . '/Modules/Payment/app/Http/Requests/PaymentUpdateRequest.php',
+        'Modules\\Payment\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Payment/app/Providers/EventServiceProvider.php',
+        'Modules\\Payment\\Providers\\PaymentServiceProvider' => __DIR__ . '/../..' . '/Modules/Payment/app/Providers/PaymentServiceProvider.php',
+        'Modules\\Payment\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Payment/app/Providers/RouteServiceProvider.php',
+        'Modules\\Pharmacist\\Database\\Factories\\PharmacistFactory' => __DIR__ . '/../..' . '/Modules/Pharmacist/database/factories/PharmacistFactory.php',
+        'Modules\\Pharmacist\\Database\\Seeders\\PharmacistDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Pharmacist/database/seeders/PharmacistDatabaseSeeder.php',
+        'Modules\\Pharmacist\\Entities\\Pharmacist' => __DIR__ . '/../..' . '/Modules/Pharmacist/Entities/Pharmacist.php',
+        'Modules\\Pharmacist\\Http\\Controllers\\PharmacistController' => __DIR__ . '/../..' . '/Modules/Pharmacist/app/Http/Controllers/PharmacistController.php',
+        'Modules\\Pharmacist\\Http\\Requests\\PharmacistAddRequest' => __DIR__ . '/../..' . '/Modules/Pharmacist/app/Http/Requests/PharmacistAddRequest.php',
+        'Modules\\Pharmacist\\Http\\Requests\\PharmacistUpdateRequest' => __DIR__ . '/../..' . '/Modules/Pharmacist/app/Http/Requests/PharmacistUpdateRequest.php',
+        'Modules\\Pharmacist\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Pharmacist/app/Providers/EventServiceProvider.php',
+        'Modules\\Pharmacist\\Providers\\PharmacistServiceProvider' => __DIR__ . '/../..' . '/Modules/Pharmacist/app/Providers/PharmacistServiceProvider.php',
+        'Modules\\Pharmacist\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Pharmacist/app/Providers/RouteServiceProvider.php',
+        'Modules\\Prescription\\Database\\Factories\\PrescriptionFactory' => __DIR__ . '/../..' . '/Modules/Prescription/database/factories/PrescriptionFactory.php',
+        'Modules\\Prescription\\Database\\Seeders\\PrescriptionDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Prescription/database/seeders/PrescriptionDatabaseSeeder.php',
+        'Modules\\Prescription\\Entities\\Prescription' => __DIR__ . '/../..' . '/Modules/Prescription/Entities/Prescription.php',
+        'Modules\\Prescription\\Http\\Controllers\\PrescriptionController' => __DIR__ . '/../..' . '/Modules/Prescription/app/Http/Controllers/PrescriptionController.php',
+        'Modules\\Prescription\\Http\\Requests\\PrescriptionRequest' => __DIR__ . '/../..' . '/Modules/Prescription/app/Http/Requests/PrescriptionRequest.php',
+        'Modules\\Prescription\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Prescription/app/Providers/EventServiceProvider.php',
+        'Modules\\Prescription\\Providers\\PrescriptionServiceProvider' => __DIR__ . '/../..' . '/Modules/Prescription/app/Providers/PrescriptionServiceProvider.php',
+        'Modules\\Prescription\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Prescription/app/Providers/RouteServiceProvider.php',
+        'Modules\\Receptionist\\Database\\Factories\\ReceptionistFactory' => __DIR__ . '/../..' . '/Modules/Receptionist/database/factories/ReceptionistFactory.php',
+        'Modules\\Receptionist\\Database\\Seeders\\ReceptionistDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Receptionist/database/seeders/ReceptionistDatabaseSeeder.php',
+        'Modules\\Receptionist\\Entities\\Receptionist' => __DIR__ . '/../..' . '/Modules/Receptionist/Entities/Receptionist.php',
+        'Modules\\Receptionist\\Http\\Controllers\\ReceptionistController' => __DIR__ . '/../..' . '/Modules/Receptionist/app/Http/Controllers/ReceptionistController.php',
+        'Modules\\Receptionist\\Http\\Requests\\ReceptionistAddRequest' => __DIR__ . '/../..' . '/Modules/Receptionist/app/Http/Requests/ReceptionistAddRequest.php',
+        'Modules\\Receptionist\\Http\\Requests\\ReceptionistUpdateRequest' => __DIR__ . '/../..' . '/Modules/Receptionist/app/Http/Requests/ReceptionistUpdateRequest.php',
+        'Modules\\Receptionist\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Receptionist/app/Providers/EventServiceProvider.php',
+        'Modules\\Receptionist\\Providers\\ReceptionistServiceProvider' => __DIR__ . '/../..' . '/Modules/Receptionist/app/Providers/ReceptionistServiceProvider.php',
+        'Modules\\Receptionist\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Receptionist/app/Providers/RouteServiceProvider.php',
+        'Modules\\Service\\Database\\Factories\\ServiceFactory' => __DIR__ . '/../..' . '/Modules/Service/database/factories/ServiceFactory.php',
+        'Modules\\Service\\Database\\Seeders\\ServiceDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Service/database/seeders/ServiceDatabaseSeeder.php',
+        'Modules\\Service\\Entities\\Service' => __DIR__ . '/../..' . '/Modules/Service/Entities/Service.php',
+        'Modules\\Service\\Http\\Controllers\\ServiceController' => __DIR__ . '/../..' . '/Modules/Service/app/Http/Controllers/ServiceController.php',
+        'Modules\\Service\\Http\\Requests\\ServiceAddRequest' => __DIR__ . '/../..' . '/Modules/Service/app/Http/Requests/ServiceAddRequest.php',
+        'Modules\\Service\\Http\\Requests\\ServiceUpdateRequest' => __DIR__ . '/../..' . '/Modules/Service/app/Http/Requests/ServiceUpdateRequest.php',
+        'Modules\\Service\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Service/app/Providers/EventServiceProvider.php',
+        'Modules\\Service\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Service/app/Providers/RouteServiceProvider.php',
+        'Modules\\Service\\Providers\\ServiceServiceProvider' => __DIR__ . '/../..' . '/Modules/Service/app/Providers/ServiceServiceProvider.php',
+        'Modules\\Speciality\\Database\\Factories\\SpecialityFactory' => __DIR__ . '/../..' . '/Modules/Speciality/database/factories/SpecialityFactory.php',
+        'Modules\\Speciality\\Database\\Seeders\\SpecialityDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Speciality/database/seeders/SpecialityDatabaseSeeder.php',
+        'Modules\\Speciality\\Http\\Controllers\\SpecialityController' => __DIR__ . '/../..' . '/Modules/Speciality/app/Http/Controllers/SpecialityController.php',
+        'Modules\\Speciality\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Speciality/app/Providers/EventServiceProvider.php',
+        'Modules\\Speciality\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Speciality/app/Providers/RouteServiceProvider.php',
+        'Modules\\Speciality\\Providers\\SpecialityServiceProvider' => __DIR__ . '/../..' . '/Modules/Speciality/app/Providers/SpecialityServiceProvider.php',
+        'Modules\\Treatment\\Database\\Factories\\TreatmentFactory' => __DIR__ . '/../..' . '/Modules/Treatment/database/factories/TreatmentFactory.php',
+        'Modules\\Treatment\\Database\\Seeders\\TreatmentDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Treatment/database/seeders/TreatmentDatabaseSeeder.php',
+        'Modules\\Treatment\\Entities\\Treatment' => __DIR__ . '/../..' . '/Modules/Treatment/Entities/Treatment.php',
+        'Modules\\Treatment\\Http\\Controllers\\TreatmentController' => __DIR__ . '/../..' . '/Modules/Treatment/app/Http/Controllers/TreatmentController.php',
+        'Modules\\Treatment\\Http\\Requests\\TreatmentAddRequest' => __DIR__ . '/../..' . '/Modules/Treatment/app/Http/Requests/TreatmentAddRequest.php',
+        'Modules\\Treatment\\Http\\Requests\\TreatmentUpdateRequest' => __DIR__ . '/../..' . '/Modules/Treatment/app/Http/Requests/TreatmentUpdateRequest.php',
+        'Modules\\Treatment\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Treatment/app/Providers/EventServiceProvider.php',
+        'Modules\\Treatment\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Treatment/app/Providers/RouteServiceProvider.php',
+        'Modules\\Treatment\\Providers\\TreatmentServiceProvider' => __DIR__ . '/../..' . '/Modules/Treatment/app/Providers/TreatmentServiceProvider.php',
+        'Modules\\User\\Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/Modules/User/database/factories/UserFactory.php',
+        'Modules\\User\\Database\\Seeders\\UserDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/User/database/seeders/UserDatabaseSeeder.php',
+        'Modules\\User\\Entities\\User' => __DIR__ . '/../..' . '/Modules/User/Entities/User.php',
+        'Modules\\User\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/User/app/Providers/EventServiceProvider.php',
+        'Modules\\User\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/User/app/Providers/RouteServiceProvider.php',
+        'Modules\\User\\Providers\\UserServiceProvider' => __DIR__ . '/../..' . '/Modules/User/app/Providers/UserServiceProvider.php',
+        'Modules\\User\\Repositories\\UserRepository' => __DIR__ . '/../..' . '/Modules/User/Repositories/UserRepository.php',
+        'Modules\\VitalSign\\Database\\Factories\\VitalSignFactory' => __DIR__ . '/../..' . '/Modules/VitalSign/database/factories/VitalSignFactory.php',
+        'Modules\\VitalSign\\Database\\Seeders\\VitalSignDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/VitalSign/database/seeders/VitalSignDatabaseSeeder.php',
+        'Modules\\VitalSign\\Entities\\VitalSign' => __DIR__ . '/../..' . '/Modules/VitalSign/Entities/VitalSign.php',
+        'Modules\\VitalSign\\Http\\Controllers\\VitalSignController' => __DIR__ . '/../..' . '/Modules/VitalSign/app/Http/Controllers/VitalSignController.php',
+        'Modules\\VitalSign\\Http\\Requests\\VitalSignAddRequest' => __DIR__ . '/../..' . '/Modules/VitalSign/app/Http/Requests/VitalSignAddRequest.php',
+        'Modules\\VitalSign\\Http\\Requests\\VitalSignUpdateRequest' => __DIR__ . '/../..' . '/Modules/VitalSign/app/Http/Requests/VitalSignUpdateRequest.php',
+        'Modules\\VitalSign\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/VitalSign/app/Providers/EventServiceProvider.php',
+        'Modules\\VitalSign\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/VitalSign/app/Providers/RouteServiceProvider.php',
+        'Modules\\VitalSign\\Providers\\VitalSignServiceProvider' => __DIR__ . '/../..' . '/Modules/VitalSign/app/Providers/VitalSignServiceProvider.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
         'Monolog\\Attribute\\WithMonologChannel' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/WithMonologChannel.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
@@ -3749,6 +4318,115 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'NunoMaduro\\Collision\\Provider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Provider.php',
         'NunoMaduro\\Collision\\SolutionsRepositories\\NullSolutionsRepository' => __DIR__ . '/..' . '/nunomaduro/collision/src/SolutionsRepositories/NullSolutionsRepository.php',
         'NunoMaduro\\Collision\\Writer' => __DIR__ . '/..' . '/nunomaduro/collision/src/Writer.php',
+        'Nwidart\\Modules\\Activators\\FileActivator' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Activators/FileActivator.php',
+        'Nwidart\\Modules\\Collection' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Collection.php',
+        'Nwidart\\Modules\\Commands\\Actions\\CheckLangCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/CheckLangCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\DisableCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/DisableCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\DumpCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/DumpCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\EnableCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/EnableCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\InstallCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/InstallCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\ListCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/ListCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\ModelPruneCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/ModelPruneCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\ModelShowCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/ModelShowCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\ModuleDeleteCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/ModuleDeleteCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\UnUseCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/UnUseCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\UpdateCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/UpdateCommand.php',
+        'Nwidart\\Modules\\Commands\\Actions\\UseCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Actions/UseCommand.php',
+        'Nwidart\\Modules\\Commands\\BaseCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/BaseCommand.php',
+        'Nwidart\\Modules\\Commands\\ComposerUpdateCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/ComposerUpdateCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\MigrateCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/MigrateCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\MigrateFreshCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/MigrateFreshCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\MigrateRefreshCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/MigrateRefreshCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\MigrateResetCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/MigrateResetCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\MigrateRollbackCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/MigrateRollbackCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\MigrateStatusCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/MigrateStatusCommand.php',
+        'Nwidart\\Modules\\Commands\\Database\\SeedCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Database/SeedCommand.php',
+        'Nwidart\\Modules\\Commands\\LaravelModulesV6Migrator' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/LaravelModulesV6Migrator.php',
+        'Nwidart\\Modules\\Commands\\Make\\ActionMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ActionMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\CastMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/CastMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ChannelMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ChannelMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\CommandMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/CommandMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ComponentClassMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ComponentClassMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ComponentViewMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ComponentViewMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ControllerMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ControllerMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\EnumMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/EnumMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\EventMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/EventMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\EventProviderMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/EventProviderMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ExceptionMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ExceptionMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\FactoryMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/FactoryMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\GeneratorCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/GeneratorCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\HelperMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/HelperMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\InterfaceMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/InterfaceMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\JobMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/JobMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ListenerMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ListenerMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\MailMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/MailMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\MiddlewareMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/MiddlewareMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\MigrationMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/MigrationMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ModelMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ModelMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ModuleMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ModuleMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\NotificationMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/NotificationMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ObserverMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ObserverMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\PolicyMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/PolicyMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ProviderMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ProviderMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\RequestMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/RequestMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ResourceMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ResourceMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\RouteProviderMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/RouteProviderMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\RuleMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/RuleMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ScopeMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ScopeMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\SeedMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/SeedMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ServiceMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ServiceMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\TestMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/TestMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\TraitMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/TraitMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Make\\ViewMakeCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Make/ViewMakeCommand.php',
+        'Nwidart\\Modules\\Commands\\Publish\\PublishCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Publish/PublishCommand.php',
+        'Nwidart\\Modules\\Commands\\Publish\\PublishConfigurationCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Publish/PublishConfigurationCommand.php',
+        'Nwidart\\Modules\\Commands\\Publish\\PublishMigrationCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Publish/PublishMigrationCommand.php',
+        'Nwidart\\Modules\\Commands\\Publish\\PublishTranslationCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/Publish/PublishTranslationCommand.php',
+        'Nwidart\\Modules\\Commands\\SetupCommand' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Commands/SetupCommand.php',
+        'Nwidart\\Modules\\Contracts\\ActivatorInterface' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Contracts/ActivatorInterface.php',
+        'Nwidart\\Modules\\Contracts\\PublisherInterface' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Contracts/PublisherInterface.php',
+        'Nwidart\\Modules\\Contracts\\RepositoryInterface' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Contracts/RepositoryInterface.php',
+        'Nwidart\\Modules\\Contracts\\RunableInterface' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Contracts/RunableInterface.php',
+        'Nwidart\\Modules\\Exceptions\\FileAlreadyExistException' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Exceptions/FileAlreadyExistException.php',
+        'Nwidart\\Modules\\Exceptions\\InvalidActivatorClass' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Exceptions/InvalidActivatorClass.php',
+        'Nwidart\\Modules\\Exceptions\\InvalidAssetPath' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Exceptions/InvalidAssetPath.php',
+        'Nwidart\\Modules\\Exceptions\\InvalidJsonException' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Exceptions/InvalidJsonException.php',
+        'Nwidart\\Modules\\Exceptions\\ModuleNotFoundException' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Exceptions/ModuleNotFoundException.php',
+        'Nwidart\\Modules\\Facades\\Module' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Facades/Module.php',
+        'Nwidart\\Modules\\FileRepository' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/FileRepository.php',
+        'Nwidart\\Modules\\Generators\\FileGenerator' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Generators/FileGenerator.php',
+        'Nwidart\\Modules\\Generators\\Generator' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Generators/Generator.php',
+        'Nwidart\\Modules\\Generators\\ModuleGenerator' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Generators/ModuleGenerator.php',
+        'Nwidart\\Modules\\Json' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Json.php',
+        'Nwidart\\Modules\\LaravelModulesServiceProvider' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/LaravelModulesServiceProvider.php',
+        'Nwidart\\Modules\\Laravel\\LaravelFileRepository' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Laravel/LaravelFileRepository.php',
+        'Nwidart\\Modules\\Laravel\\Module' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Laravel/Module.php',
+        'Nwidart\\Modules\\LumenModulesServiceProvider' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/LumenModulesServiceProvider.php',
+        'Nwidart\\Modules\\Lumen\\LumenFileRepository' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Lumen/LumenFileRepository.php',
+        'Nwidart\\Modules\\Lumen\\Module' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Lumen/Module.php',
+        'Nwidart\\Modules\\Migrations\\Migrator' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Migrations/Migrator.php',
+        'Nwidart\\Modules\\Module' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Module.php',
+        'Nwidart\\Modules\\ModulesServiceProvider' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/ModulesServiceProvider.php',
+        'Nwidart\\Modules\\Process\\Installer' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Process/Installer.php',
+        'Nwidart\\Modules\\Process\\Runner' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Process/Runner.php',
+        'Nwidart\\Modules\\Process\\Updater' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Process/Updater.php',
+        'Nwidart\\Modules\\Providers\\BootstrapServiceProvider' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Providers/BootstrapServiceProvider.php',
+        'Nwidart\\Modules\\Providers\\ConsoleServiceProvider' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Providers/ConsoleServiceProvider.php',
+        'Nwidart\\Modules\\Providers\\ContractsServiceProvider' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Providers/ContractsServiceProvider.php',
+        'Nwidart\\Modules\\Publishing\\AssetPublisher' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Publishing/AssetPublisher.php',
+        'Nwidart\\Modules\\Publishing\\LangPublisher' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Publishing/LangPublisher.php',
+        'Nwidart\\Modules\\Publishing\\MigrationPublisher' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Publishing/MigrationPublisher.php',
+        'Nwidart\\Modules\\Publishing\\Publisher' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Publishing/Publisher.php',
+        'Nwidart\\Modules\\Routing\\Controller' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Routing/Controller.php',
+        'Nwidart\\Modules\\Support\\Config\\GenerateConfigReader' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Support/Config/GenerateConfigReader.php',
+        'Nwidart\\Modules\\Support\\Config\\GeneratorPath' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Support/Config/GeneratorPath.php',
+        'Nwidart\\Modules\\Support\\Migrations\\NameParser' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Support/Migrations/NameParser.php',
+        'Nwidart\\Modules\\Support\\Migrations\\SchemaParser' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Support/Migrations/SchemaParser.php',
+        'Nwidart\\Modules\\Support\\Stub' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Support/Stub.php',
+        'Nwidart\\Modules\\Traits\\CanClearModulesCache' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Traits/CanClearModulesCache.php',
+        'Nwidart\\Modules\\Traits\\MigrationLoaderTrait' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Traits/MigrationLoaderTrait.php',
+        'Nwidart\\Modules\\Traits\\ModuleCommandTrait' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Traits/ModuleCommandTrait.php',
+        'Nwidart\\Modules\\Traits\\PathNamespace' => __DIR__ . '/..' . '/nwidart/laravel-modules/src/Traits/PathNamespace.php',
         'Override' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/Override.php',
         'PHPUnit\\Event\\Application\\Finished' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
         'PHPUnit\\Event\\Application\\FinishedSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/FinishedSubscriber.php',
@@ -9101,6 +9779,14 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'Wikimedia\\Composer\\Merge\\V2\\ExtraPackage' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/ExtraPackage.php',
+        'Wikimedia\\Composer\\Merge\\V2\\Logger' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/Logger.php',
+        'Wikimedia\\Composer\\Merge\\V2\\MergePlugin' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/MergePlugin.php',
+        'Wikimedia\\Composer\\Merge\\V2\\MissingFileException' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/MissingFileException.php',
+        'Wikimedia\\Composer\\Merge\\V2\\MultiConstraint' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/MultiConstraint.php',
+        'Wikimedia\\Composer\\Merge\\V2\\NestedArray' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/NestedArray.php',
+        'Wikimedia\\Composer\\Merge\\V2\\PluginState' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/PluginState.php',
+        'Wikimedia\\Composer\\Merge\\V2\\StabilityFlags' => __DIR__ . '/..' . '/wikimedia/composer-merge-plugin/src/StabilityFlags.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 

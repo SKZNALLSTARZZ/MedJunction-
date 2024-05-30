@@ -1,0 +1,11 @@
+{
+    "name": "MedicalHistory",
+    "alias": "medicalhistory",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MedicalHistory\\Providers\\MedicalHistoryServiceProvider"
+    ],
+    "files": []
+}
