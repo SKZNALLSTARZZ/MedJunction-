@@ -3,8 +3,7 @@
 namespace Modules\Service\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Service\Entities\Service;
-use Module\Speciality\Entities\Speciality;
+use Modules\Service\Database\Factories\ServiceFactory;
 
 class ServiceDatabaseSeeder extends Seeder
 {
@@ -13,9 +12,6 @@ class ServiceDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $specialities = Speciality::all();
-        $services = Service::factory()->count(10)->create([
-            'speciality_id' => $specialities->random(),
-        ]);
+        \Modules\Service\Database\Factories\ServiceFactory::new()->count(10)->create([]);
     }
 }

@@ -3,9 +3,7 @@
 namespace Modules\Appointment\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Patient\Entities\Patient;
-use Modules\Doctor\Entities\Doctor;
-use Modules\Appointment\Entities\Appointment;
+use Modules\Appointment\database\factories\AppointmentFactory;
 
 class AppointmentDatabaseSeeder extends Seeder
 {
@@ -14,12 +12,6 @@ class AppointmentDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $doctors = Doctor::all();
-        $patients = Patient::all();
-
-        $appointments = Appointment::factory()->count(20)->create([
-            'doctor_id' => $doctors->random(),
-            'patient_id' => $patients->random(),
-        ]);
+        \Modules\Appointment\Database\Factories\AppointmentFactory::new()->count(45)->create();
     }
 }

@@ -2,7 +2,9 @@
 
 namespace Modules\Speciality\Database\Factories;
 
-use App\Models\Department;
+
+use Modules\Department\Entities\Department;
+use Modules\Speciality\Entities\Speciality;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,12 +17,15 @@ class SpecialityFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Speciality::class;
+
     public function definition(): array
     {
+        $departments = Department::all();
         return [
             'name' => $this->faker->word,
             'description' => $this->faker->sentence,
-            'department_id' => Department::factory(),
+            'department_id' => $departments->random()->id,
         ];
     }
 }

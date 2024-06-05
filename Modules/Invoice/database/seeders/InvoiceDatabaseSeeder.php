@@ -3,8 +3,7 @@
 namespace Modules\Invoice\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Invoice\Entities\Invoice;
-use Modules\Payment\Entities\Payment;
+use Modules\Invoice\Database\Factories\InvoiceFactory;
 
 class InvoiceDatabaseSeeder extends Seeder
 {
@@ -13,9 +12,6 @@ class InvoiceDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $payments = Payment::all();
-        $invoices = Invoice::factory()->count(10)->create([
-            'payment_id' => $payments->random(),
-        ]);
+        \Modules\Invoice\Database\Factories\InvoiceFactory::new()->count(35)->create();
     }
 }

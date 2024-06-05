@@ -3,8 +3,7 @@
 namespace Modules\Treatment\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Service\Entities\Service;
-use Modules\Treatment\Entities\Treatment;
+use Modules\Treatment\Database\Factories\TreatmentFactory;
 
 class TreatmentDatabaseSeeder extends Seeder
 {
@@ -13,9 +12,6 @@ class TreatmentDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $services = Service::all();
-        $treatments = Treatment::factory()->count(10)->create([
-            'service_id' => $services->random(),
-        ]);
+        \Modules\Treatment\Database\Factories\TreatmentFactory::new()->count(10)->create();
     }
 }

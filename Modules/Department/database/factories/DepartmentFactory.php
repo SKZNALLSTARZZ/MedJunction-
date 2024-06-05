@@ -2,6 +2,7 @@
 
 namespace Modules\Department\Database\Factories;
 
+use Modules\Department\Entities\Department;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,6 +15,8 @@ class DepartmentFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Department::class;
+
     public function definition(): array
     {
         return [

@@ -3,7 +3,9 @@
 namespace Modules\Speciality\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Module\Speciality\Entities\Speciality;
+
+use Modules\Speciality\Entities\Speciality;
+use Modules\Speciality\Database\Factories\SpecialityFactory;
 
 class SpecialityDatabaseSeeder extends Seeder
 {
@@ -12,6 +14,6 @@ class SpecialityDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $specialities = Speciality::factory()->count(5)->create();
+        \Modules\Speciality\Database\Factories\SpecialityFactory::new()->count(5)->create([]);
     }
 }

@@ -2,7 +2,8 @@
 
 namespace Modules\Prescription\Database\Factories;
 
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
+use Modules\Prescription\Entities\Prescription;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,10 +16,13 @@ class PrescriptionFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Prescription::class;
+
     public function definition(): array
     {
+        $consultations = Consultation::all();
         return [
-            'consultation_id' => Consultation::Factory(),
+            'consultation_id' => $consultations->random()->id,
             'dosage' => $this->faker->numberBetween(0, 10),
             'quantity' => $this->faker->numberBetween(0, 5),
             'instructions' => $this->faker->sentence,

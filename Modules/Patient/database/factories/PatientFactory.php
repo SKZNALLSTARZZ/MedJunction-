@@ -3,6 +3,7 @@
 namespace Modules\Patient\Database\Factories;
 
 use Modules\User\Entities\User;
+use Modules\Patient\Entities\Patient;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,6 +16,8 @@ class PatientFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Patient::class;
+
     public function definition(): array
     {
         return [

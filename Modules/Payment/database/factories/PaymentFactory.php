@@ -3,6 +3,7 @@
 namespace Modules\Payment\Database\Factories;
 
 
+use Modules\Payment\Entities\Payment;
 use Modules\Receptionist\Entities\Receptionist;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -16,12 +17,15 @@ class PaymentFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Payment::class;
+
     public function definition(): array
     {
+        $receptionists = Receptionist::all();
         return [
-            'receptionist_id' => Receptionist::factory(),
+            'receptionist_id' => $receptionists->random()->id,
             'status' => $this->faker->randomElement(['paid', 'pending', 'failed']),
-            'payment_type' => $faker->randomElement(['cash', 'credit_card', 'debit_card', 'cheque']),
+            'payment_type' => $this->faker->randomElement(['cash', 'credit_card', 'debit_card', 'cheque']),
             'remarks' => $this->faker->sentence,
             'amount' => $this->faker->randomFloat(2, 10, 1000),
         ];

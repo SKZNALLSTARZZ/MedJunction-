@@ -3,7 +3,7 @@
 namespace Modules\Allergy\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Allergy\Entities\Allergy;
+use Modules\Allergy\Database\Factories\AllergyFactory;
 
 class AllergyDatabaseSeeder extends Seeder
 {
@@ -12,6 +12,6 @@ class AllergyDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $allergies = Allergy::factory()->count(10)->create();
+        \Modules\Allergy\Database\Factories\AllergyFactory::new()->count(10)->create();
     }
 }

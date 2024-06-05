@@ -4,7 +4,7 @@ namespace Modules\Pharmacist\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Modules\User\Entities\User;
-use Modules\Pharmacist\Entities\Pharmacist;
+use Modules\Pharmacist\Database\Factories\PharmacistFactory;
 
 class PharmacistDatabaseSeeder extends Seeder
 {
@@ -13,9 +13,11 @@ class PharmacistDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::all();
-        $pharmacists = Pharmacist::factory()->count(10)->create([
-            'user_id' => $users->random(),
-        ]);
+        $userIds = User::where('role', 'pharmacist')->pluck('id');
+        $pharmacists = collect();
+        $userIds->each(function ($userId) use ($pharmacists) {
+            $pharmacist = \Modules\Pharmacist\Database\Factories\PharmacistFactory::new()->create(['user_id' => $userId]);
+            $pharmacists->push($pharmacist);
+        });
     }
 }

@@ -3,8 +3,8 @@
 namespace Modules\Invoice\Database\Factories;
 
 
+use Modules\Invoice\Entities\Invoice;
 use Modules\Payment\Entities\Payment;
-use Module\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,11 +17,13 @@ class InvoiceFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Invoice::class;
+
     public function definition(): array
     {
+        $payments = Payment::all();
         return [
-            'consultation_id' => Consultation::factory(),
-            'payment_id' => Payment::factory(),
+            'payment_id' => $payments->random()->id,
             'discount_amount' => $this->faker->optional()->randomFloat(2, 1, 100),
         ];
     }

@@ -5,6 +5,7 @@ namespace Modules\VitalSign\Database\Seeders;
 use Illuminate\Database\Seeder;
 use Modules\VitalSign\Entities\VitalSign;
 use Module\Consultation\Entities\Consultation;
+use Modules\VitalSign\Database\Factories\VitalSignFactory;
 
 class VitalSignDatabaseSeeder extends Seeder
 {
@@ -13,9 +14,6 @@ class VitalSignDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $consultations = Consultation::all();
-        $vitalSigns = VitalSign::factory()->count(10)->create([
-            'consultation_id' -> $consultations->random(),
-        ]);
+        \Modules\VitalSign\Database\Factories\VitalSignFactory::new()->count(10)->create();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Modules\Allergy\Database\Factories;
 
+use Modules\Allergy\Entities\Allergy;
 use Modules\Patient\Entities\Patient;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -15,13 +16,17 @@ class AllergyFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    protected $model = Allergy::class;
+
     public function definition(): array
     {
+        $patients = Patient::all();
         return [
-            'patient_id' => Patient::factory(),
-            'name' => $faker->word,
-            'severity' => $faker->randomElement(['mild', 'moderate', 'severe']),
-            'reaction' => $faker->sentence,
+            'patient_id' => $patients->random()->id,
+            'name' => $this->faker->word,
+            'severity' => $this->faker->randomElement(['mild', 'moderate', 'severe']),
+            'reaction' => $this->faker->sentence,
         ];
     }
 }

@@ -1,21 +1,23 @@
 <?php
 
-namespace Module\Consultation\Entities;
+namespace Modules\Consultation\Entities;
 
+use Module\Nurse\Entities\Nurse;
+use Modules\Doctor\Entities\Doctor;
 use Module\Invoice\Entities\Invoice;
+use Illuminate\Database\Eloquent\Model;
 use Module\Diagnosis\Entities\Diagnosis;
 use Module\Treatment\Entities\Treatment;
 use Module\VitalSign\Entities\VitalSign;
-use Module\Prescription\Entities\Prescription;
-use Module\Nurse\Entities\Nurse;
-use Illuminate\Database\Eloquent\Model;
 use Modules\Appointment\Entities\Appointment;
+use Module\Prescription\Entities\Prescription;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Consultation extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'doctor_id',
         'nurse_id',
         'appointment_id',
         'treatment_id',
@@ -25,6 +27,11 @@ class Consultation extends Model
         'complains',
         'pictures',
     ];
+
+    public function doctor()
+    {
+        return $this->hasMany(Doctor::class);
+    }
 
     public function nurse()
     {

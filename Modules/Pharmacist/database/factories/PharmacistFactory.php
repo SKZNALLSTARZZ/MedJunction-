@@ -3,6 +3,7 @@
 namespace Modules\Pharmacist\Database\Factories;
 
 use Modules\User\Entities\User;
+use Modules\Pharmacist\Entities\Pharmacist;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,13 +16,15 @@ class PharmacistFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Pharmacist::class;
+
     public function definition(): array
     {
         return [
             'name' => $this->faker->name,
             'phone' => $this->faker->phoneNumber,
             'address' => $this->faker->address,
-            'user_id' => User::factory(),
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }

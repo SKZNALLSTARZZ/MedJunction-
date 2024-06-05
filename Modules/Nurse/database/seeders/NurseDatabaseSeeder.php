@@ -4,8 +4,7 @@ namespace Modules\Nurse\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Modules\User\Entities\User;
-use Modules\Nurse\Entities\Nurse;
-use Modules\Department\Entities\Department;
+use Modules\Nurse\Database\Factories\NurseFactory;
 
 class NurseDatabaseSeeder extends Seeder
 {
@@ -14,12 +13,11 @@ class NurseDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::all();
-        $department = Department::all();
-
-        $nurses = Nurse::factory()->count(10)->create([
-            'user_id' => $users->random(),
-            'department_id' => $departments->random(),
-        ]);
+        $userIds = User::where('role', 'nurse')->pluck('id');
+        $nurses = collect();
+        $userIds->each(function ($userId) use ($nurses) {
+            $nurse = \Modules\Nurse\Database\Factories\NurseFactory::new()->create(['user_id' => $userId]);
+            $nurses->push($nurse);
+        });
     }
 }

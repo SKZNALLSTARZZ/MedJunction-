@@ -4,6 +4,7 @@ namespace Modules\User\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Modules\User\Entities\User;
+use Modules\User\Database\Factories\UserFactory;
 
 class UserDatabaseSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class UserDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::factory()->count(10)->create();
+        \Modules\User\Database\Factories\UserFactory::new()->count(10)->create();
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
-namespace Database\Factories;
+namespace Modules\Habit\Database\Factories;
 
+use Modules\Habit\Entities\Habit;
 use Modules\Patient\Entities\Patient;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -15,13 +16,16 @@ class HabitFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Habit::class;
+
     public function definition(): array
     {
+        $patients = Patient::all();
         return [
-            'patient_id' => Patient::factory(),
-            'type' => $faker->randomElement(['smoking', 'drinking', 'exercise']),
-            'frequency' => $faker->randomElement(['daily', 'weekly', 'monthly']),
-            'duration' => $faker->randomElement(['short-term', 'long-term']),
+            'patient_id' => $patients->random()->id,
+            'type' => $this->faker->randomElement(['smoking', 'drinking', 'exercise']),
+            'frequency' => $this->faker->randomElement(['daily', 'weekly', 'monthly']),
+            'duration' => $this->faker->randomElement(['short-term', 'long-term']),
         ];
     }
 }

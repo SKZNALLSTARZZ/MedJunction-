@@ -1,6 +1,6 @@
 <?php
 
-namespace Module\Speciality\Entities;
+namespace Modules\Speciality\Entities;
 
 
 use Modules\Nurse\Entities\Nurse;

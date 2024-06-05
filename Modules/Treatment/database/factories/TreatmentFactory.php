@@ -3,6 +3,7 @@
 namespace Modules\Treatment\Database\Factories;
 
 use Modules\Service\Entities\Service;
+use Modules\Treatment\Entities\Treatment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,13 +16,16 @@ class TreatmentFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Treatment::class;
+
     public function definition(): array
     {
+        $services = Service::all();
         return [
-            'service_id' => Service::factory(),
-            'name' => $faker->word,
-            'description' => $faker->sentence,
-            'price' => $faker->randomFloat(2, 10, 500),
+            'service_id' => $services->random()->id,
+            'name' => $this->faker->word,
+            'description' => $this->faker->sentence,
+            'price' => $this->faker->randomFloat(2, 10, 500),
         ];
     }
 }

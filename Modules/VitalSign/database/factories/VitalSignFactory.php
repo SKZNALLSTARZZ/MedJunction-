@@ -2,7 +2,7 @@
 
 namespace Modules\VitalSign\Database\Factories;
 
-use Module\Consultation\Entities\Consultation;
+use Modules\VitalSign\Entities\VitalSign;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,6 +15,8 @@ class VitalSignFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = VitalSign::class;
+
     public function definition(): array
     {
         return [
@@ -23,7 +25,6 @@ class VitalSignFactory extends Factory
             'respiration_rate' => $this->faker->numberBetween(12, 20),
             'blood_pressure' => $this->faker->randomElement(['120/80', '130/90', '140/100']),
             'oxygen_saturation' => $this->faker->numberBetween(90, 100),
-            'consultation_id' => Consultation::Factory(),
         ];
     }
 }

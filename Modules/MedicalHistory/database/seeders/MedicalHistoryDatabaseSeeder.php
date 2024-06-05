@@ -3,8 +3,7 @@
 namespace Modules\MedicalHistory\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\Patient\Entities\Patient;
-use Modules\MedicalHistory\Entities\MedicalHistory;
+use Database\Factories\MedicalHistoryFactory;
 
 class MedicalHistoryDatabaseSeeder extends Seeder
 {
@@ -13,9 +12,6 @@ class MedicalHistoryDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $patients = Patient::all();
-        $medicalhistories = MedicalHistory::factory()->count(10)->create([
-            'patient_id' => $patients->random(),
-        ]);
+        \Modules\MedicalHistory\Database\Factories\MedicalHistoryFactory::new()->count(10)->create();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Modules\Diagnosis\Database\Factories;
 
+use Modules\Diagnosis\Entities\Diagnosis;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,11 +15,13 @@ class DiagnosisFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Diagnosis::class;
+
     public function definition(): array
     {
         return [
-            'diagnosis_code' => $faker->unique()->regexify('[A-Z0-9]{5}'),
-            'diagnosis_description' => $faker->sentence,
+            'diagnosis_code' => $this->faker->unique()->regexify('[A-Z0-9]{5}'),
+            'diagnosis_description' => $this->faker->sentence,
         ];
     }
 }

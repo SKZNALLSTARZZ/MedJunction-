@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('consultation_id')->constrained()->onDelete('cascade');
             $table->integer('dosage');
             $table->integer('quantity');
-            $table->integer('instructions');
+            $table->text('instructions');
             $table->decimal('amount', 8, 2);
             $table->timestamps();
         });

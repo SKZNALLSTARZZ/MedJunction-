@@ -11,7 +11,6 @@ class VitalSign extends Model
     use HasFactory;
 
     protected $fillable = [
-        'consultation_id',
         'body_temperature',
         'pulse_rate',
         'respiration_rate',

@@ -4,9 +4,7 @@ namespace Modules\Doctor\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Modules\User\Entities\User;
-use Modules\Doctor\Entities\Doctor;
-use Modules\Department\Entities\Department;
-use Modules\Speciality\Entities\Speciality;
+use Modules\Doctor\Database\Factories\DoctorFactory;
 
 class DoctorDatabaseSeeder extends Seeder
 {
@@ -15,14 +13,11 @@ class DoctorDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::all();
-        $departments = Department::all();
-        $specialities = Speciality::all();
-
-        $doctors = Doctor::factory()->count(10)->create([
-            'user_id' => $users->random(),
-            'department_id' => $departments->random(),
-            'speciality_id' => $specialities->random(),
-        ]);
+        $userIds = User::where('role', 'doctor')->pluck('id');
+        $doctors = collect();
+        $userIds->each(function ($userId) use ($doctors) {
+            $doctor = \Modules\Doctor\Database\Factories\DoctorFactory::new()->create(['user_id' => $userId]);
+            $doctors->push($doctor);
+        });
     }
 }

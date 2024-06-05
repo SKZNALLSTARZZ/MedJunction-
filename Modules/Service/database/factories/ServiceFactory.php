@@ -2,7 +2,8 @@
 
 namespace Modules\Service\Database\Factories;
 
-use Module\Speciality\Entities\Speciality;
+use Modules\Service\Entities\Service;
+use Modules\Speciality\Entities\Speciality;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,13 +16,16 @@ class ServiceFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Service::class;
+
     public function definition(): array
     {
+        $specialities = Speciality::all();
         return [
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'status' => $this->faker->randomElement(['active', 'inactive']),
-            'speciality_id' => Speciality::factory(),
+            'speciality_id' => $specialities->random()->id,
         ];
     }
 }
