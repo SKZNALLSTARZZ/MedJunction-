@@ -13,6 +13,6 @@ class UserDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \Modules\User\Database\Factories\UserFactory::new()->count(10)->create();
+        \Modules\User\Database\Factories\UserFactory::new()->count(145)->create();
     }
 }
