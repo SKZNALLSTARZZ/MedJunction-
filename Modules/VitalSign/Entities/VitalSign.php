@@ -20,6 +20,6 @@ class VitalSign extends Model
 
     public function prescription()
     {
-        return $this->belongsTo(Consultation::class);
+        return $this->hasone(Consultation::class);
     }
 }

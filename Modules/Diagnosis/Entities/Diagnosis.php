@@ -13,6 +13,6 @@ class Diagnosis extends Model
 
     public function consultations()
     {
-        return $this->hasMany(Consultation::class);
+        return $this->hasone(Consultation::class);
     }
 }

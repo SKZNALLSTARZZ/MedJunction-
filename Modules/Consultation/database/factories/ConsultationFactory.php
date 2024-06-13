@@ -70,7 +70,7 @@ class ConsultationFactory extends Factory
             'treatment_id' => $treatments->random()->id,
             'diagnosis_id' => $diagnosisId,
             'invoice_id' => $invoiceId,
-            'vital_signs_id' => $vitalSigns->random()->id,
+            'vital_sign_id' => $vitalSigns->random()->id,
             'prescription_id' => $prescriptionId,
             'complains' => $this->faker->text,
             'pictures' => json_encode([$this->faker->imageUrl()]),

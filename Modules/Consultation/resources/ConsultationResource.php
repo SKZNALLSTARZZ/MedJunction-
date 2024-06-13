@@ -11,12 +11,10 @@ class ConsultationResource extends JsonResource
             'complains' => $this->complains,
             'date' => $this->appointment->date ?? null,
             'diagnosis' => $this->diagnosis->diagnosis_description ?? null,
-            'treatments' => $this->treatments ? $this->treatments->map(function ($treatment) {
-                return [
-                    'name' => $treatment->name,
-                    'price' => $treatment->price,
-                ];
-            }) : [],
+            'treatments' => [
+                    'name' => optional($this->treatment)->name,
+                    'price' => optional($this->treatment)->price,
+                ],
             'vital_signs' => [
                 'body_temperature' => optional($this->vitalSign)->body_temperature,
                 'pulse_rate' => optional($this->vitalSign)->pulse_rate,
@@ -31,5 +29,4 @@ class ConsultationResource extends JsonResource
             }) : [],
         ];
     }
-
 }

@@ -23,7 +23,7 @@ class Consultation extends Model
         'treatment_id',
         'diagnosis_id',
         'invoice_id',
-        'vitalSign_id',
+        'vital_sign_id',
         'complains',
         'prescription_id',
         'pictures',

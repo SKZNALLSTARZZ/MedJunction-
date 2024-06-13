@@ -18,8 +18,7 @@ return new class extends Migration
             $table->foreignId('treatment_id')->constrained()->onDelete('cascade');
             $table->foreignId('diagnosis_id')->constrained()->onDelete('cascade');
             $table->foreignId('invoice_id')->constrained()->onDelete('cascade');
-            $table->unsignedBigInteger('vital_signs_id');
-            $table->foreign('vital_signs_id')->references('id')->on('vital_signs')->onDelete('cascade');
+            $table->foreignId('vital_sign_id')->constrained()->onDelete('cascade');
             $table->foreignId('prescription_id')->constrained()->onDelete('cascade');
             $table->text('complains')->nullable();
             $table->json('pictures')->nullable();
