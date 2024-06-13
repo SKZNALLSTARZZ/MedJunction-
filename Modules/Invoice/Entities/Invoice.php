@@ -5,7 +5,7 @@ namespace Modules\Invoice\Entities;
 
 use Modules\Payment\Entities\Payment;
 use Illuminate\Database\Eloquent\Model;
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Invoice extends Model

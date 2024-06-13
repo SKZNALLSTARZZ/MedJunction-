@@ -27,6 +27,7 @@ use Modules\Consultation\Database\Seeders\ConsultationDatabaseSeeder;
 use Modules\Prescription\Database\Seeders\PrescriptionDatabaseSeeder;
 use Modules\Receptionist\Database\Seeders\ReceptionistDatabaseSeeder;
 use Modules\MedicalHistory\Database\Seeders\MedicalHistoryDatabaseSeeder;
+use Modules\MedicinePrescription\Database\Seeders\MedicinePrescriptionDatabaseSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -55,8 +56,9 @@ class DatabaseSeeder extends Seeder
             InvoiceDatabaseSeeder::class,
             TreatmentDatabaseSeeder::class,
             VitalSignDatabaseSeeder::class,
-            ConsultationDatabaseSeeder::class,
             PrescriptionDatabaseSeeder::class,
+            ConsultationDatabaseSeeder::class,
+            MedicinePrescriptionDatabaseSeeder::class,
         ]);
     }
 }

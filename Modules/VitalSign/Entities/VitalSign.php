@@ -3,7 +3,7 @@
 namespace Modules\VitalSign\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class VitalSign extends Model
@@ -22,5 +22,4 @@ class VitalSign extends Model
     {
         return $this->belongsTo(Consultation::class);
     }
-
 }

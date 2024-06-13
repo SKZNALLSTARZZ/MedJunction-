@@ -2,15 +2,15 @@
 
 namespace Modules\Consultation\Entities;
 
-use Module\Nurse\Entities\Nurse;
+use Modules\Nurse\Entities\Nurse;
 use Modules\Doctor\Entities\Doctor;
-use Module\Invoice\Entities\Invoice;
+use Modules\Invoice\Entities\Invoice;
 use Illuminate\Database\Eloquent\Model;
-use Module\Diagnosis\Entities\Diagnosis;
-use Module\Treatment\Entities\Treatment;
-use Module\VitalSign\Entities\VitalSign;
+use Modules\Diagnosis\Entities\Diagnosis;
+use Modules\Treatment\Entities\Treatment;
+use Modules\VitalSign\Entities\VitalSign;
 use Modules\Appointment\Entities\Appointment;
-use Module\Prescription\Entities\Prescription;
+use Modules\Prescription\Entities\Prescription;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Consultation extends Model
@@ -25,17 +25,18 @@ class Consultation extends Model
         'invoice_id',
         'vitalSign_id',
         'complains',
+        'prescription_id',
         'pictures',
     ];
 
     public function doctor()
     {
-        return $this->hasMany(Doctor::class);
+        return $this->belongsTo(Doctor::class);
     }
 
     public function nurse()
     {
-        return $this->hasMany(Nurse::class);
+        return $this->belongsToMany(Nurse::class);
     }
 
     public function appointment()
@@ -45,26 +46,26 @@ class Consultation extends Model
 
     public function vitalSign()
     {
-        return $this->hasOne(VitalSign::class);
+        return $this->belongsTo(VitalSign::class);
     }
 
     public function diagnosis()
     {
-        return $this->hasOne(Diagnosis::class);
+        return $this->belongsTo(Diagnosis::class);
     }
 
     public function treatment()
     {
-        return $this->hasMany(Treatment::class);
+        return $this->belongsTo(Treatment::class);
     }
 
     public function prescription()
     {
-        return $this->hasOne(Prescription::class);
+        return $this->belongsTo(Prescription::class);
     }
 
     public function invoice()
     {
-        return $this->hasOne(Invoice::class);
+        return $this->belongsTo(Invoice::class);
     }
 }

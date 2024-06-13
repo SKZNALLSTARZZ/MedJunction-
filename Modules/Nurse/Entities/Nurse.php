@@ -4,8 +4,8 @@ namespace Modules\Nurse\Entities;
 
 use Modules\User\Entities\User;
 use Illuminate\Database\Eloquent\Model;
-use Module\Speciality\Entities\Speciality;
-use Module\Consultation\Entities\Consultation;
+use Modules\Speciality\Entities\Speciality;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Nurse extends Model

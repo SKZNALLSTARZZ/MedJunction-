@@ -12,6 +12,7 @@ use Modules\Treatment\Entities\Treatment;
 use Modules\VitalSign\Entities\VitalSign;
 use Modules\Appointment\Entities\Appointment;
 use Modules\Consultation\Entities\Consultation;
+use Modules\Prescription\Entities\Prescription;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -28,20 +29,43 @@ class ConsultationFactory extends Factory
 
     public function definition(): array
     {
+        static $usedAppointmentIds = [];
+        static $usedDiagnosisIds = [];
+        static $usedInvoiceIds = [];
+        static $usedPrescriptionIds = [];
+
         $nurses = Nurse::all();
-        $appointments = Appointment::all();
+        $appointments = Appointment::where('is_consulted', true)->get();
         $treatments = Treatment::all();
         $diagnoses = Diagnosis::all();
         $invoices = Invoice::all();
         $vitalSigns = VitalSign::all();
+        $prescriptions = Prescription::all();
+
+        $availableAppointments = $appointments->whereNotIn('id', $usedAppointmentIds);
+        $availableDiagnoses = $diagnoses->whereNotIn('id', $usedDiagnosisIds);
+        $availableInvoices = $invoices->whereNotIn('id', $usedInvoiceIds);
+        $availablePrescriptions = $prescriptions->whereNotIn('id', $usedPrescriptionIds);
+
+        $appointmentId = $availableAppointments->random()->id;
+        $diagnosisId = $availableDiagnoses->random()->id;
+        $invoiceId = $availableInvoices->random()->id;
+        $prescriptionId = $availablePrescriptions->random()->id;
+
+        $usedAppointmentIds[] = $appointmentId;
+        $usedDiagnosisIds[] = $diagnosisId;
+        $usedInvoiceIds[] = $invoiceId;
+        $usedPrescriptionIds[] = $prescriptionId;
+
 
         return [
             'nurse_id' => $nurses->random()->id,
-            'appointment_id' => $appointments->random()->id,
+            'appointment_id' => $appointmentId,
             'treatment_id' => $treatments->random()->id,
-            'diagnosis_id' => $diagnoses->random()->id,
-            'invoice_id' => $invoices->random()->id,
+            'diagnosis_id' => $diagnosisId,
+            'invoice_id' => $invoiceId,
             'vital_signs_id' => $vitalSigns->random()->id,
+            'prescription_id' => $prescriptionId,
             'complains' => $this->faker->text,
             'pictures' => json_encode([$this->faker->imageUrl()]),
         ];

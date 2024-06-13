@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('medicineprescriptions', function (Blueprint $table) {
-            $table->id();
+        Schema::create('medicine_prescription', function (Blueprint $table) {
             $table->foreignId('prescription_id')->constrained()->onDelete('cascade');
             $table->foreignId('medicine_id')->constrained()->onDelete('cascade');
+            $table->primary(['prescription_id', 'medicine_id']);
             $table->timestamps();
         });
     }

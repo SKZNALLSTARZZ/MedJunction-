@@ -14,15 +14,20 @@ use Modules\User\Repositories\UserRepository;
 use Modules\Patient\Repositories\PatientRepository;
 use Modules\Patient\Http\Requests\PatientAddRequest;
 use Modules\Patient\Http\Requests\PatientUpdateRequest;
+use Modules\Consultation\resources\ConsultationResource;
+use Modules\Consultation\Repositories\ConsultationRepository;
 
 
 
 class PatientController extends Controller
 {
-    private $patientRepository;
-    public function __construct(PatientRepository $patienRepository, UserRepository $userRepository) {
+    protected $patientRepository;
+    protected $consultationRepository;
+    protected $userRepository;
+    public function __construct(PatientRepository $patienRepository, UserRepository $userRepository, ConsultationRepository $consultationRepository) {
         $this->patientRepository = $patienRepository;
         $this->userRepository = $userRepository;
+        $this->consultationRepository = $consultationRepository;
     }
 
     public function index()
@@ -126,5 +131,12 @@ class PatientController extends Controller
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
+    }
+
+    public function getConsultations(Request $request, int $patientId)
+    {
+        $consultations = $this->consultationRepository->getConsultationsForPatient($patientId);
+
+        return ConsultationResource::collection($consultations);
     }
 }

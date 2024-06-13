@@ -3,7 +3,7 @@
 namespace Modules\MedicalHistory\Entities;
 
 
-use App\Models\User;
+use Modules\User\Entities\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 

@@ -20,9 +20,7 @@ class PrescriptionFactory extends Factory
 
     public function definition(): array
     {
-        $consultations = Consultation::all();
         return [
-            'consultation_id' => $consultations->random()->id,
             'dosage' => $this->faker->numberBetween(0, 10),
             'quantity' => $this->faker->numberBetween(0, 5),
             'instructions' => $this->faker->sentence,

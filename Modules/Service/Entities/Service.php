@@ -4,7 +4,7 @@ namespace Modules\Service\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Treatment\Entities\Treatment;
-use Module\Speciality\Entities\Speciality;
+use Modules\Speciality\Entities\Speciality;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Service extends Model

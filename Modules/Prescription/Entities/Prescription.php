@@ -4,7 +4,7 @@ namespace Modules\Prescription\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Medicine\Entities\Medicine;
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Prescription extends Model
@@ -17,7 +17,6 @@ class Prescription extends Model
         'quantity',
         'instructions',
         'amount',
-        'consultation_id',
     ];
 
     public function consultation()
@@ -27,7 +26,7 @@ class Prescription extends Model
 
     public function medicines()
     {
-        return $this->hasMany(Medicine::class);
+        return $this->belongsToMany(Medicine::class);
     }
 
 }

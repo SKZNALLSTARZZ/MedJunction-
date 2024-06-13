@@ -4,7 +4,7 @@ namespace Modules\Treatment\Entities;
 
 use Modules\Service\Entities\Service;
 use Illuminate\Database\Eloquent\Model;
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Treatment extends Model
@@ -20,4 +20,5 @@ class Treatment extends Model
     public function consultations()
     {
         return $this->hasMany(Consultation::class);
-    }}
+    }
+}

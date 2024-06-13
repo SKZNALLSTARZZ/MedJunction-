@@ -3,7 +3,7 @@
 namespace Modules\Diagnosis\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Diagnosis extends Model
@@ -13,6 +13,6 @@ class Diagnosis extends Model
 
     public function consultations()
     {
-        return $this->belongsTo(Consultation::class);
+        return $this->hasMany(Consultation::class);
     }
 }

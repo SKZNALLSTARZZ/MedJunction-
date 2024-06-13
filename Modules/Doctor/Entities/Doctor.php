@@ -6,7 +6,7 @@ use Modules\User\Entities\User;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Speciality\Entities\Speciality;
 use Modules\Appointment\Entities\Appointment;
-use Module\Consultation\Entities\Consultation;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Doctor extends Model
