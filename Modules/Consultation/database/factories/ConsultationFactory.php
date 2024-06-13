@@ -27,6 +27,18 @@ class ConsultationFactory extends Factory
      */
     protected $model = Consultation::class;
 
+    private function getRandomId($collection, &$usedIds)
+    {
+        $availableItems = $collection->whereNotIn('id', $usedIds);
+        if ($availableItems->isEmpty()) {
+            if ($collection->isEmpty()) {
+                throw new InvalidArgumentException("No items available to select from.");
+            }
+            return $collection->random()->id;
+        }
+        return $availableItems->random()->id;
+    }
+
     public function definition(): array
     {
         static $usedAppointmentIds = [];
@@ -42,21 +54,15 @@ class ConsultationFactory extends Factory
         $vitalSigns = VitalSign::all();
         $prescriptions = Prescription::all();
 
-        $availableAppointments = $appointments->whereNotIn('id', $usedAppointmentIds);
-        $availableDiagnoses = $diagnoses->whereNotIn('id', $usedDiagnosisIds);
-        $availableInvoices = $invoices->whereNotIn('id', $usedInvoiceIds);
-        $availablePrescriptions = $prescriptions->whereNotIn('id', $usedPrescriptionIds);
-
-        $appointmentId = $availableAppointments->random()->id;
-        $diagnosisId = $availableDiagnoses->random()->id;
-        $invoiceId = $availableInvoices->random()->id;
-        $prescriptionId = $availablePrescriptions->random()->id;
+        $appointmentId = $this->getRandomId($appointments, $usedAppointmentIds);
+        $diagnosisId = $this->getRandomId($diagnoses, $usedDiagnosisIds);
+        $invoiceId = $this->getRandomId($invoices, $usedInvoiceIds);
+        $prescriptionId = $this->getRandomId($prescriptions, $usedPrescriptionIds);
 
         $usedAppointmentIds[] = $appointmentId;
         $usedDiagnosisIds[] = $diagnosisId;
         $usedInvoiceIds[] = $invoiceId;
         $usedPrescriptionIds[] = $prescriptionId;
-
 
         return [
             'nurse_id' => $nurses->random()->id,
