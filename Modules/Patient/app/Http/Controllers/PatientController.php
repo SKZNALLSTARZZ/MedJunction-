@@ -16,6 +16,7 @@ use Modules\Patient\Http\Requests\PatientAddRequest;
 use Modules\Patient\Http\Requests\PatientUpdateRequest;
 use Modules\Consultation\resources\ConsultationResource;
 use Modules\Consultation\Repositories\ConsultationRepository;
+use Modules\Consultation\resources\ConsultationSummaryResource;
 
 
 

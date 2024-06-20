@@ -15,6 +15,9 @@ return new class extends Migration
             $table->foreignId('prescription_id')->constrained()->onDelete('cascade');
             $table->foreignId('medicine_id')->constrained()->onDelete('cascade');
             $table->primary(['prescription_id', 'medicine_id']);
+            $table->string('dosage');
+            $table->integer('quantity');
+            $table->text('instructions')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('medicineprescriptions');
+        Schema::dropIfExists('medicine_prescription');
     }
 };

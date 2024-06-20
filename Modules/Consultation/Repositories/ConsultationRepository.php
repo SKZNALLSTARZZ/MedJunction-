@@ -11,6 +11,14 @@ class ConsultationRepository
         return Consultation::whereHas('appointment', function ($query) use ($patientId) {
             $query->where('patient_id', $patientId)
                   ->where('is_consulted', true);
-        })->with(['appointment', 'diagnosis', 'treatment', 'vitalSign', 'prescription.medicines'])->get();
+        })->with([
+            'appointment',
+            'diagnosis',
+            'treatment',
+            'vitalSign',
+            'prescription.medicines' => function ($query) {
+                $query->withPivot('dosage', 'quantity', 'instructions');
+            }
+        ])->get();
     }
 }

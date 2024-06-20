@@ -21,9 +21,6 @@ class PrescriptionFactory extends Factory
     public function definition(): array
     {
         return [
-            'dosage' => $this->faker->numberBetween(0, 10),
-            'quantity' => $this->faker->numberBetween(0, 5),
-            'instructions' => $this->faker->sentence,
             'amount' => $this->faker->randomFloat(2, 1, 1000),
         ];
     }
