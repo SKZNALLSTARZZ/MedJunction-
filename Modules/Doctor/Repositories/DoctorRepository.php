@@ -4,6 +4,7 @@ namespace Modules\Doctor\Repositories;
 use Carbon\Carbon;
 use Modules\Doctor\Entities\Doctor;
 use Modules\Patient\Entities\Patient;
+use Modules\Appointment\Entities\Appointment;
 
 
 class DoctorRepository

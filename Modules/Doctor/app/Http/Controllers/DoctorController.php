@@ -12,14 +12,33 @@ use Illuminate\Http\RedirectResponse;
 use Modules\Doctor\Repositories\DoctorRepository;
 use Modules\Doctor\Http\Requests\DoctorAddRequest;
 use Modules\Doctor\Http\Requests\DoctorUpdateRequest;
+use Modules\Appointment\resources\AppointmentResource;
+use Modules\Appointment\Repositories\AppointmentRepository;
 
 class DoctorController extends Controller
 {
     protected $doctorRepository;
+    protected $appointmentRepository;
 
-    public function __construct(DoctorRepository $doctorRepository)
+    public function __construct(DoctorRepository $doctorRepository, AppointmentRepository $appointmentRepository)
     {
         $this->doctorRepository = $doctorRepository;
+        $this->appointmentRepository = $appointmentRepository;
+    }
+
+    public function getAppointments()
+    {
+        try{
+            $user = auth()->user();
+            $doctor = $user->doctor;
+            if (!$doctor) {
+                return response()->json(['error' => 'Doctor not found for the authenticated user'], Response::HTTP_NOT_FOUND);
+            }
+            $appointments = $this->appointmentRepository->getDoctorAppointments($doctor->id);
+            return response()->json(AppointmentResource::collection($appointments), Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 
     public function consultedPatients()

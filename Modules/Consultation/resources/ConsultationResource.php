@@ -12,11 +12,17 @@ class ConsultationResource extends JsonResource
         $totalPrice = $treatmentPrice + $medicinePrices;
 
         $prescriptions = $this->prescription ? $this->prescription->medicines->map(function ($medicine) {
+            $quantity = $medicine->pivot->quantity ?? 0;
+            $price = $medicine->price;
+            $amount = $price * $quantity;
+
             return [
                 'name' => $medicine->name,
+                'price' => $price,
                 'dosage' => $medicine->pivot->dosage ?? null,
-                'quantity' => $medicine->pivot->quantity ?? null,
+                'quantity' => $quantity,
                 'instructions' => $medicine->pivot->instructions ?? null,
+                'amount' => number_format($amount, 2),
             ];
         }) : [];
 
@@ -26,13 +32,14 @@ class ConsultationResource extends JsonResource
             'Diagnosis' => $this->diagnosis->diagnosis_description ?? null,
             'Treatments' => optional($this->treatment)->name,
             'Vital_signs' => [
-                'body_temperature' => optional($this->vitalSign)->body_temperature,
-                'pulse_rate' => optional($this->vitalSign)->pulse_rate,
-                'respiration_rate' => optional($this->vitalSign)->respiration_rate,
-                'blood_pressure' => optional($this->vitalSign)->blood_pressure,
+                'Temperature: ' => optional($this->vitalSign)->body_temperature,
+                'Pulse Rate: ' => optional($this->vitalSign)->pulse_rate,
+                'Respiration Rate: ' => optional($this->vitalSign)->respiration_rate,
+                'Bloodc Pressure: ' => optional($this->vitalSign)->blood_pressure,
             ],
             'Prescription' => $prescriptions,
             'Price' => number_format($totalPrice, 2),
+            'Pictures' => $this->pictures,
         ];
     }
 }
