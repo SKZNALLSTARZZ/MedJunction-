@@ -160,6 +160,18 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
             'Modules\\Patient\\Database\\Seeders\\' => 33,
             'Modules\\Patient\\Database\\Factories\\' => 35,
             'Modules\\Patient\\' => 16,
+            'Modules\\PatientMedicalHistories\\Tests\\' => 38,
+            'Modules\\PatientMedicalHistories\\Database\\Seeders\\' => 49,
+            'Modules\\PatientMedicalHistories\\Database\\Factories\\' => 51,
+            'Modules\\PatientMedicalHistories\\' => 32,
+            'Modules\\PatientHabits\\Tests\\' => 28,
+            'Modules\\PatientHabits\\Database\\Seeders\\' => 39,
+            'Modules\\PatientHabits\\Database\\Factories\\' => 41,
+            'Modules\\PatientHabits\\' => 22,
+            'Modules\\PatientAllergies\\Tests\\' => 31,
+            'Modules\\PatientAllergies\\Database\\Seeders\\' => 42,
+            'Modules\\PatientAllergies\\Database\\Factories\\' => 44,
+            'Modules\\PatientAllergies\\' => 25,
             'Modules\\Nurse\\Tests\\' => 20,
             'Modules\\Nurse\\Database\\Seeders\\' => 31,
             'Modules\\Nurse\\Database\\Factories\\' => 33,
@@ -657,6 +669,54 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Modules\\Patient\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Modules/Patient/app',
+        ),
+        'Modules\\PatientMedicalHistories\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/tests',
+        ),
+        'Modules\\PatientMedicalHistories\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/database/seeders',
+        ),
+        'Modules\\PatientMedicalHistories\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/database/factories',
+        ),
+        'Modules\\PatientMedicalHistories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/app',
+        ),
+        'Modules\\PatientHabits\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientHabits/tests',
+        ),
+        'Modules\\PatientHabits\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientHabits/database/seeders',
+        ),
+        'Modules\\PatientHabits\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientHabits/database/factories',
+        ),
+        'Modules\\PatientHabits\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientHabits/app',
+        ),
+        'Modules\\PatientAllergies\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientAllergies/tests',
+        ),
+        'Modules\\PatientAllergies\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientAllergies/database/seeders',
+        ),
+        'Modules\\PatientAllergies\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientAllergies/database/factories',
+        ),
+        'Modules\\PatientAllergies\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modules/PatientAllergies/app',
         ),
         'Modules\\Nurse\\Tests\\' => 
         array (
@@ -3959,7 +4019,9 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Modules\\Appointment\\Providers\\AppointmentServiceProvider' => __DIR__ . '/../..' . '/Modules/Appointment/app/Providers/AppointmentServiceProvider.php',
         'Modules\\Appointment\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Appointment/app/Providers/EventServiceProvider.php',
         'Modules\\Appointment\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Appointment/app/Providers/RouteServiceProvider.php',
+        'Modules\\Appointment\\Repositories\\AppointmentRepository' => __DIR__ . '/../..' . '/Modules/Appointment/Repositories/AppointmentRepository.php',
         'Modules\\Appointment\\database\\factories\\AppointmentFactory' => __DIR__ . '/../..' . '/Modules/Appointment/database/factories/AppointmentFactory.php',
+        'Modules\\Appointment\\resources\\AppointmentResource' => __DIR__ . '/../..' . '/Modules/Appointment/resources/AppointmentResource.php',
         'Modules\\Consultation\\Database\\Factories\\ConsultationFactory' => __DIR__ . '/../..' . '/Modules/Consultation/database/factories/ConsultationFactory.php',
         'Modules\\Consultation\\Database\\Seeders\\ConsultationDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Consultation/database/seeders/ConsultationDatabaseSeeder.php',
         'Modules\\Consultation\\Entities\\Consultation' => __DIR__ . '/../..' . '/Modules/Consultation/Entities/Consultation.php',
@@ -3969,7 +4031,6 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Modules\\Consultation\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Consultation/app/Providers/RouteServiceProvider.php',
         'Modules\\Consultation\\Repositories\\ConsultationRepository' => __DIR__ . '/../..' . '/Modules/Consultation/Repositories/ConsultationRepository.php',
         'Modules\\Consultation\\resources\\ConsultationResource' => __DIR__ . '/../..' . '/Modules/Consultation/resources/ConsultationResource.php',
-        'Modules\\Consultation\\resources\\ConsultationSummaryResource' => __DIR__ . '/../..' . '/Modules/Consultation/resources/ConsultationSummaryResource.php',
         'Modules\\Department\\Database\\Factories\\DepartmentFactory' => __DIR__ . '/../..' . '/Modules/Department/database/factories/DepartmentFactory.php',
         'Modules\\Department\\Database\\Seeders\\DepartmentDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Department/database/seeders/DepartmentDatabaseSeeder.php',
         'Modules\\Department\\Entities\\Department' => __DIR__ . '/../..' . '/Modules/Department/Entities/Department.php',
@@ -4054,6 +4115,21 @@ class ComposerStaticInitbfe12996eeecb6fdc8713a9fd9d431f8
         'Modules\\Nurse\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/Nurse/app/Providers/EventServiceProvider.php',
         'Modules\\Nurse\\Providers\\NurseServiceProvider' => __DIR__ . '/../..' . '/Modules/Nurse/app/Providers/NurseServiceProvider.php',
         'Modules\\Nurse\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/Nurse/app/Providers/RouteServiceProvider.php',
+        'Modules\\PatientAllergies\\Database\\Seeders\\PatientAllergiesDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/PatientAllergies/database/seeders/PatientAllergiesDatabaseSeeder.php',
+        'Modules\\PatientAllergies\\Http\\Controllers\\PatientAllergiesController' => __DIR__ . '/../..' . '/Modules/PatientAllergies/app/Http/Controllers/PatientAllergiesController.php',
+        'Modules\\PatientAllergies\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientAllergies/app/Providers/EventServiceProvider.php',
+        'Modules\\PatientAllergies\\Providers\\PatientAllergiesServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientAllergies/app/Providers/PatientAllergiesServiceProvider.php',
+        'Modules\\PatientAllergies\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientAllergies/app/Providers/RouteServiceProvider.php',
+        'Modules\\PatientHabits\\Database\\Seeders\\PatientHabitsDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/PatientHabits/database/seeders/PatientHabitsDatabaseSeeder.php',
+        'Modules\\PatientHabits\\Http\\Controllers\\PatientHabitsController' => __DIR__ . '/../..' . '/Modules/PatientHabits/app/Http/Controllers/PatientHabitsController.php',
+        'Modules\\PatientHabits\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientHabits/app/Providers/EventServiceProvider.php',
+        'Modules\\PatientHabits\\Providers\\PatientHabitsServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientHabits/app/Providers/PatientHabitsServiceProvider.php',
+        'Modules\\PatientHabits\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientHabits/app/Providers/RouteServiceProvider.php',
+        'Modules\\PatientMedicalHistories\\Database\\Seeders\\PatientMedicalHistoriesDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/database/seeders/PatientMedicalHistoriesDatabaseSeeder.php',
+        'Modules\\PatientMedicalHistories\\Http\\Controllers\\PatientMedicalHistoriesController' => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/app/Http/Controllers/PatientMedicalHistoriesController.php',
+        'Modules\\PatientMedicalHistories\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/app/Providers/EventServiceProvider.php',
+        'Modules\\PatientMedicalHistories\\Providers\\PatientMedicalHistoriesServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/app/Providers/PatientMedicalHistoriesServiceProvider.php',
+        'Modules\\PatientMedicalHistories\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Modules/PatientMedicalHistories/app/Providers/RouteServiceProvider.php',
         'Modules\\Patient\\Database\\Factories\\PatientFactory' => __DIR__ . '/../..' . '/Modules/Patient/database/factories/PatientFactory.php',
         'Modules\\Patient\\Database\\Seeders\\PatientDatabaseSeeder' => __DIR__ . '/../..' . '/Modules/Patient/database/seeders/PatientDatabaseSeeder.php',
         'Modules\\Patient\\Entities\\Patient' => __DIR__ . '/../..' . '/Modules/Patient/Entities/Patient.php',

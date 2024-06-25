@@ -2,7 +2,7 @@
 
 namespace Modules\Allergy\Entities;
 
-use Modules\User\Entities\User;
+use Modules\Patient\Entities\Patient;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -11,8 +11,8 @@ class Allergy extends Model
     use HasFactory;
     protected $fillable = ['patient_id', 'name', 'severity', 'reaction'];
 
-    public function patient()
+    public function patients()
     {
-        return $this->belongsTo(User::class, 'patient_id');
+        return $this->belongsToMany(Patient::class, 'patient_allergies');
     }
 }

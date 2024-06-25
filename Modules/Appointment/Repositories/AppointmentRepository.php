@@ -12,7 +12,7 @@ class AppointmentRepository
     {
         $this->model = $appointment;
     }
-    
+
     public function getDoctorAppointments(int $doctorId)
     {
         return Appointment::where('doctor_id', $doctorId)
@@ -27,5 +27,14 @@ class AppointmentRepository
                   ->orderBy('created_at', 'desc')
                   ->with('doctor')
                   ->get();
+    }
+
+    public function getDoctorAppointmentsForSelectedPatient(int $doctorId, int $patientId)
+    {
+        return Appointment::where('doctor_id', $doctorId)
+        ->where('patient_id', $patientId)
+        ->orderBy('created_at', 'desc')
+        ->with('patient', 'doctor')
+        ->get();
     }
 }

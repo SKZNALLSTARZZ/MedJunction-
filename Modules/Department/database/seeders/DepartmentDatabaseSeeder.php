@@ -13,6 +13,6 @@ class DepartmentDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \Modules\Department\Database\Factories\DepartmentFactory::new()->count(10)->create();
+        \Modules\Department\Database\Factories\DepartmentFactory::new()->count(3)->create();
     }
 }

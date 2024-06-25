@@ -14,6 +14,6 @@ class SpecialityDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \Modules\Speciality\Database\Factories\SpecialityFactory::new()->count(5)->create([]);
+        \Modules\Speciality\Database\Factories\SpecialityFactory::new()->count(8)->create([]);
     }
 }

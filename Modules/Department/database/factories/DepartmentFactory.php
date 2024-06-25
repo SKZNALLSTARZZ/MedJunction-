@@ -17,10 +17,20 @@ class DepartmentFactory extends Factory
      */
     protected $model = Department::class;
 
+    protected static $seededNames = [];
+
     public function definition(): array
     {
+        $names = ['Cardiology', 'Oncology', 'Orthopedics'];
+
+        $availableNames = array_diff($names, static::$seededNames);
+
+        $name = $this->faker->unique()->randomElement($availableNames);
+
+        static::$seededNames[] = $name;
+
         return [
-            'name' => $this->faker->word,
+            'name' => $name,
             'description' => $this->faker->sentence,
         ];
     }

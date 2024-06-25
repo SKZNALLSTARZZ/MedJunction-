@@ -21,11 +21,36 @@ class SpecialityFactory extends Factory
 
     public function definition(): array
     {
-        $departments = Department::all();
+        if (Department::count() === 0) {
+            Department::factory()->count(3)->create();
+        }
+
+        $specialtiesByDepartment = [
+            'Cardiology' => [
+                'Interventional Cardiology',
+                'Electrophysiology',
+                'Heart Failure Management'
+            ],
+            'Oncology' => [
+                'Medical Oncology',
+                'Radiation Oncology',
+                'Surgical Oncology'
+            ],
+            'Orthopedics' => [
+                'Joint Replacement',
+                'Sports Medicine',
+                'Spine Surgery'
+            ],
+        ];
+
+        $department = Department::inRandomOrder()->first();
+
+        $specialtyName = $this->faker->randomElement($specialtiesByDepartment[$department->name]);
+
         return [
-            'name' => $this->faker->word,
+            'name' => $specialtyName,
             'description' => $this->faker->sentence,
-            'department_id' => $departments->random()->id,
+            'department_id' => $department->id,
         ];
     }
 }

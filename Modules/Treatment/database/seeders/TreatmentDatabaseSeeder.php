@@ -12,6 +12,6 @@ class TreatmentDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \Modules\Treatment\Database\Factories\TreatmentFactory::new()->count(10)->create();
+        \Modules\Treatment\Database\Factories\TreatmentFactory::new()->count(36)->create();
     }
 }

@@ -1,0 +1,11 @@
+{
+    "name": "PatientHabits",
+    "alias": "patienthabits",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PatientHabits\\Providers\\PatientHabitsServiceProvider"
+    ],
+    "files": []
+}

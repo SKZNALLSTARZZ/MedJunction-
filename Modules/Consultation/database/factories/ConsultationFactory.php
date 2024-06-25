@@ -8,7 +8,6 @@ use Modules\Invoice\Entities\Invoice;
 use Modules\Patient\Entities\Patient;
 use Modules\Service\Entities\Service;
 use Modules\Diagnosis\Entities\Diagnosis;
-use Modules\Treatment\Entities\Treatment;
 use Modules\VitalSign\Entities\VitalSign;
 use Modules\Appointment\Entities\Appointment;
 use Modules\Consultation\Entities\Consultation;
@@ -48,7 +47,6 @@ class ConsultationFactory extends Factory
 
         $nurses = Nurse::all();
         $appointments = Appointment::where('is_consulted', true)->get();
-        $treatments = Treatment::all();
         $diagnoses = Diagnosis::all();
         $invoices = Invoice::all();
         $vitalSigns = VitalSign::all();
@@ -67,7 +65,6 @@ class ConsultationFactory extends Factory
         return [
             'nurse_id' => $nurses->random()->id,
             'appointment_id' => $appointmentId,
-            'treatment_id' => $treatments->random()->id,
             'diagnosis_id' => $diagnosisId,
             'invoice_id' => $invoiceId,
             'vital_sign_id' => $vitalSigns->random()->id,

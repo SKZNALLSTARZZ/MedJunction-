@@ -41,6 +41,21 @@ class DoctorController extends Controller
         }
     }
 
+    public function getAppointmentsOfPatient(int $patientId)
+    {
+        try{
+            $user = auth()->user();
+            $doctor = $user->doctor;
+            if (!$doctor) {
+                return response()->json(['error' => 'Doctor not found for the authenticated user'], Response::HTTP_NOT_FOUND);
+            }
+            $appointments = $this->appointmentRepository->getDoctorAppointmentsForSelectedPatient($doctor->id, $patientId);
+            return response()->json(AppointmentResource::collection($appointments), Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
     public function consultedPatients()
     {
         try{

@@ -26,8 +26,11 @@ use Modules\Appointment\Database\Seeders\AppointmentDatabaseSeeder;
 use Modules\Consultation\Database\Seeders\ConsultationDatabaseSeeder;
 use Modules\Prescription\Database\Seeders\PrescriptionDatabaseSeeder;
 use Modules\Receptionist\Database\Seeders\ReceptionistDatabaseSeeder;
+use Modules\PatientHabits\Database\Seeders\PatientHabitsDatabaseSeeder;
 use Modules\MedicalHistory\Database\Seeders\MedicalHistoryDatabaseSeeder;
+use Modules\PatientAllergies\Database\Seeders\PatientAllergiesDatabaseSeeder;
 use Modules\MedicinePrescription\Database\Seeders\MedicinePrescriptionDatabaseSeeder;
+use Modules\PatientMedicalHistories\Database\Seeders\PatientMedicalHistoriesDatabaseSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -51,14 +54,18 @@ class DatabaseSeeder extends Seeder
             MedicalHistoryDatabaseSeeder::class,
             DiagnosisDatabaseSeeder::class,
             MedicineDatabaseSeeder::class,
+            TreatmentDatabaseSeeder::class,
             AppointmentDatabaseSeeder::class,
             PaymentDatabaseSeeder::class,
             InvoiceDatabaseSeeder::class,
-            TreatmentDatabaseSeeder::class,
             VitalSignDatabaseSeeder::class,
             PrescriptionDatabaseSeeder::class,
             ConsultationDatabaseSeeder::class,
             MedicinePrescriptionDatabaseSeeder::class,
+            PatientAllergiesDatabaseSeeder::class,
+            PatientHabitsDatabaseSeeder::class,
+            PatientMedicalHistoriesDatabaseSeeder::class,
+
         ]);
     }
 }

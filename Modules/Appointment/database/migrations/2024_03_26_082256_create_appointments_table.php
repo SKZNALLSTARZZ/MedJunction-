@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('status');
             $table->foreignId('doctor_id')->constrained()->onDelete('cascade');
             $table->foreignId('patient_id')->constrained()->onDelete('cascade');
+            $table->foreignId('treatment_id')->constrained()->onDelete('cascade');
             $table->boolean('is_consulted')->default(false);
             $table->timestamps();
         });

@@ -20,7 +20,6 @@ class Consultation extends Model
         'doctor_id',
         'nurse_id',
         'appointment_id',
-        'treatment_id',
         'diagnosis_id',
         'invoice_id',
         'vital_sign_id',
@@ -52,11 +51,6 @@ class Consultation extends Model
     public function diagnosis()
     {
         return $this->belongsTo(Diagnosis::class);
-    }
-
-    public function treatment()
-    {
-        return $this->belongsTo(Treatment::class);
     }
 
     public function prescription()

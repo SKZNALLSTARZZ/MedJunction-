@@ -1,6 +1,7 @@
 <?php
 namespace Modules\Appointment\resources;
 
+use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class AppointmentResource extends JsonResource
@@ -8,14 +9,18 @@ class AppointmentResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'Date' => $this->created_at->toDateString(),
+            'Date' => Carbon::parse($this->created_at)->format('M d, Y'),
             'Patient' => [
                 'name' => $this->patient->name,
                 'phone' => $this->patient->phone,
             ],
+            'Doctor' => [
+                'name' => $this->doctor->name,
+            ],
             'Status' => $this->status,
-            'Start_time' => $this->start_time? \Carbon\Carbon::parse($this->start_time)->format('H:i') : null,
-            'End_time' => $this->end_time? \Carbon\Carbon::parse($this->end_time)->format('H:i') : null,
+            'Start_time' => $this->start_time,
+            'End_time' => $this->end_time,
+            'Description' => $this->description,
         ];
     }
 }

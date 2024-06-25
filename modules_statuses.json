@@ -21,5 +21,8 @@
     "Consultation": true,
     "User": true,
     "FileManagement": true,
-    "MedicinePrescription": true
+    "MedicinePrescription": true,
+    "PatientHabits": true,
+    "PatientMedicalHistories": true,
+    "PatientAllergies": true
 }

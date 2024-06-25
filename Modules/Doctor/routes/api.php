@@ -19,4 +19,5 @@ Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::get('/consulted-patients', [DoctorController::class, 'consultedPatients']);
     Route::get('/consulted-patient-counts', [DoctorController::class, 'getConsultedPatientCounts']);
     Route::get('/doctor-appointments', [DoctorController::class, 'getAppointments']);
+    Route::get('/doctor-appointments-of-patient/{patientId}', [DoctorController::class, 'getAppointmentsOfPatient']);
 });

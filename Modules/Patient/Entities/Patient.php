@@ -37,19 +37,19 @@ class Patient extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function allergies()
-    {
-        return $this->hasMany(Allergy::class);
-    }
-
     public function habits()
     {
-        return $this->hasMany(Habit::class);
+        return $this->belongsToMany(Habit::class, 'patient_habits');
     }
 
     public function medicalHistories()
     {
-        return $this->hasMany(MedicalHistory::class);
+        return $this->belongsToMany(MedicalHistory::class, 'patient_medical_histories');
+    }
+
+    public function allergies()
+    {
+        return $this->belongsToMany(Allergy::class, 'patient_allergies');
     }
 
     protected static function booted()

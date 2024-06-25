@@ -12,6 +12,6 @@ class ServiceDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \Modules\Service\Database\Factories\ServiceFactory::new()->count(10)->create([]);
+        \Modules\Service\Database\Factories\ServiceFactory::new()->count(18)->create([]);
     }
 }

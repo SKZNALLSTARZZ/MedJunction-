@@ -5,6 +5,7 @@ namespace Modules\Appointment\database\factories;
 use Carbon\Carbon;
 use Modules\Doctor\Entities\Doctor;
 use Modules\Patient\Entities\Patient;
+use Modules\Treatment\Entities\Treatment;
 use Modules\Appointment\Entities\Appointment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -24,6 +25,7 @@ class AppointmentFactory extends Factory
     {
         $doctors = Doctor::all();
         $patients = Patient::all();
+        $treatments = Treatment::all();
 
         $startTime = Carbon::instance($this->faker->dateTimeBetween('-1 week', '+1 week'));
         $endTime = (clone $startTime)->addHours($this->faker->numberBetween(1, 3));
@@ -36,6 +38,7 @@ class AppointmentFactory extends Factory
             'status' => $this->faker->randomElement(['pending', 'approved', 'cancelled']),
             'doctor_id' => $this->faker->randomElement($doctors)->id,
             'patient_id' => $this->faker->randomElement($patients)->id,
+            'treatment_id' => $treatments->random()->id,
             'is_consulted' => $this->faker->boolean,
         ];
     }
