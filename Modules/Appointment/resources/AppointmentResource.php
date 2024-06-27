@@ -21,6 +21,7 @@ class AppointmentResource extends JsonResource
             'Start_time' => $this->start_time,
             'End_time' => $this->end_time,
             'Description' => $this->description,
+            'Treatment' => $this->treatment->name,
         ];
     }
 }

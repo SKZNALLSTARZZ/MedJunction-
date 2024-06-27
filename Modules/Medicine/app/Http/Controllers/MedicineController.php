@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Medicine\Entities\Medicine;
+use Modules\Medicine\resources\MedicineResource;
 use Modules\Medicine\Http\Requests\MedicineAddRequest;
 use Modules\Medicine\Http\Requests\MedicineUpdateRequest;
 
@@ -16,7 +17,7 @@ class MedicineController extends Controller
     {
         try {
             $medicines = Medicine::all();
-            return response()->json($medicines, Response::HTTP_OK);
+            return response()->json(MedicineResource::collection($medicines), Response::HTTP_OK);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }

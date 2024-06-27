@@ -4,8 +4,9 @@ namespace Modules\Appointment\Entities;
 
 use Modules\Doctor\Entities\Doctor;
 use Modules\Patient\Entities\Patient;
-use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Treatment\Entities\Treatment;
+use Modules\Consultation\Entities\Consultation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Appointment extends Model

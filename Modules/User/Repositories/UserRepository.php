@@ -21,32 +21,68 @@ class UserRepository
         return User::create($data);
     }
 
-    public function getUserName($userId)
+    public function getUserData($userId)
     {
         $user = User::find($userId);
         if (!$user) {
             return null;
         }
 
+        $name = null;
+        $phone = null;
+        $address = null;
+        $email = $user->email;
+        $role = $user->role;
+        $image = $user->img_url;
+
         switch ($user->role) {
             case 'patient':
                 $patient = $this->patientRepository->singleByUserId($user->id);
-                return $patient ? $patient->name : null;
+                if ($patient) {
+                    $name = $patient->name;
+                    $phone = $patient->phone;
+                    $address = $patient->address;
+                }
+                break;
 
             case 'doctor':
                 $doctor = Doctor::where('user_id', $user->id)->first();
-                return $doctor ? $doctor->name : null;
+                if ($doctor) {
+                    $name = $doctor->name;
+                    $phone = $doctor->phone;
+                    $address = $doctor->address;
+                }
+                break;
 
             case 'pharmacist':
                 $pharmacist = Pharmacist::where('user_id', $user->id)->first();
-                return $pharmacist ? $pharmacist->name : null;
+                if ($pharmacist) {
+                    $name = $pharmacist->name;
+                    $phone = $pharmacist->phone;
+                    $address = $pharmacist->address;
+                }
+                break;
 
             case 'receptionist':
                 $receptionist = Receptionist::where('user_id', $user->id)->first();
-                return $receptionist ? $receptionist->name : null;
+                if ($receptionist) {
+                    $name = $receptionist->name;
+                    $phone = $receptionist->phone;
+                    $address = $receptionist->address;
+                }
+                break;
 
             default:
                 return null;
         }
+
+        return [
+            'name' => $name,
+            'phone' => $phone,
+            'email' => $email,
+            'role' => $role,
+            'image' => $image,
+            'address' => $address,
+        ];
     }
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Patient\Entities\Patient;
 use Modules\User\Repositories\UserRepository;
+use Modules\Patient\resources\PatientResource;
 use Modules\Patient\Repositories\PatientRepository;
 use Modules\Patient\Http\Requests\PatientAddRequest;
 use Modules\Patient\Http\Requests\PatientUpdateRequest;
@@ -68,7 +69,7 @@ class PatientController extends Controller
                 return response()->json(['error' => 'Resource not found'], Response::HTTP_NOT_FOUND);
             }
 
-            return response()->json($patient, Response::HTTP_OK);
+            return response()->json(new PatientResource($patient), Response::HTTP_OK);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }

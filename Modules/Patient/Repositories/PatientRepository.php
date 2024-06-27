@@ -27,7 +27,7 @@ class  PatientRepository{
     }
 
     public function Single($id){
-        $query = Patient::with('user:id,email,img_url');
+        $query = Patient::with('user:id,email,img_url', 'habits:id,type', 'allergies:id,name', 'medicalHistories:id,medical_condition');
 
         if ($id !== null) {
             $query->where('id', $id);

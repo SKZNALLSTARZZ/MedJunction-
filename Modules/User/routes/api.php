@@ -15,5 +15,6 @@ use Modules\User\Http\Controllers\UserController;
 */
 
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
-    Route::apiResource('user', UserController::class)->names('user');
+    //Route::apiResource('user', UserController::class)->names('user');
+    Route::put('/change_password', [UserController::class, 'updatePassword']);
 });

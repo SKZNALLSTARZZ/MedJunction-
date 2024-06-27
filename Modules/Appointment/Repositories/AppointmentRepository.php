@@ -34,7 +34,7 @@ class AppointmentRepository
         return Appointment::where('doctor_id', $doctorId)
         ->where('patient_id', $patientId)
         ->orderBy('created_at', 'desc')
-        ->with('patient', 'doctor')
+        ->with('patient', 'doctor', 'treatment')
         ->get();
     }
 }

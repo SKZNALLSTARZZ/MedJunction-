@@ -12,9 +12,8 @@ class ConsultationRepository
             $query->where('patient_id', $patientId)
                   ->where('is_consulted', true);
         })->with([
-            'appointment',
+            'appointment.treatment',
             'diagnosis',
-            'treatment',
             'vitalSign',
             'prescription.medicines' => function ($query) {
                 $query->withPivot('dosage', 'quantity', 'instructions');

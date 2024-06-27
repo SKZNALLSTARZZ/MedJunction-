@@ -17,7 +17,6 @@ class Consultation extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'doctor_id',
         'nurse_id',
         'appointment_id',
         'diagnosis_id',
@@ -27,11 +26,6 @@ class Consultation extends Model
         'prescription_id',
         'pictures',
     ];
-
-    public function doctor()
-    {
-        return $this->belongsTo(Doctor::class);
-    }
 
     public function nurse()
     {
