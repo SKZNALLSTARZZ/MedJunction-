@@ -19,11 +19,11 @@ class Invoice extends Model
 
     public function consultation()
     {
-        return $this->belongsTo(Consultation::class);
+        return $this->hasOne(Consultation::class);
     }
 
     public function payment()
     {
-        return $this->hasOne(Payment::class);
+        return $this->belongsTo(Payment::class);
     }
 }

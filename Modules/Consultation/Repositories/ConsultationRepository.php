@@ -18,6 +18,6 @@ class ConsultationRepository
             'prescription.medicines' => function ($query) {
                 $query->withPivot('dosage', 'quantity', 'instructions');
             }
-        ])->get();
+        ])->distinct()->get();
     }
 }

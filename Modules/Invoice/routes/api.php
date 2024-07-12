@@ -16,4 +16,7 @@ use Modules\Invoice\Http\Controllers\InvoiceController;
 
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::apiResource('invoice', InvoiceController::class)->names('invoice');
+    Route::get('/patientinvoices/{patientId}', [InvoiceController::class, 'getPatientInvoices']);
+    Route::get('/invoices', [InvoiceController::class, 'getInvoices']);
+    Route::get('/invoicedetails/{invoiceId}', [InvoiceController::class, 'getInvoiceDetails']);
 });

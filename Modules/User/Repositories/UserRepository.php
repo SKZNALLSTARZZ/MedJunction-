@@ -28,6 +28,7 @@ class UserRepository
             return null;
         }
 
+        $patientId = null;
         $name = null;
         $phone = null;
         $address = null;
@@ -42,6 +43,7 @@ class UserRepository
                     $name = $patient->name;
                     $phone = $patient->phone;
                     $address = $patient->address;
+                    $patientId = (int) $patient->id;
                 }
                 break;
 
@@ -83,6 +85,7 @@ class UserRepository
             'role' => $role,
             'image' => $image,
             'address' => $address,
+            'patientId' => $patientId,
         ];
     }
 }
