@@ -94,6 +94,10 @@ class PaymentController extends Controller
 
         return PaymentResource::collection($payments);
     }
+    public function getAllPayments(Request $request)
+    {
+        return  $this->PaymentRepository->getPaymentsWithTotals();
+    }
     public function countAllPayment()
     {
         try {

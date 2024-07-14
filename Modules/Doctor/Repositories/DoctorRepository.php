@@ -58,4 +58,22 @@ class DoctorRepository
             'yearly' => $yearlyCount,
         ];
     }
+    public function all(){
+        $doctors = Doctor::with('user:id,email,img_url')->get();
+
+        foreach ($doctors as $doctor) {
+            $imageData = null;
+            if ($doctor->user && $doctor->user->img_url) {
+                $imagePath = storage_path('app/public/uploads/' . basename($doctor->user->img_url));
+                if (file_exists($imagePath)) {
+                    $imageData = base64_encode(file_get_contents($imagePath));
+                }else{
+                    $imageData = "No DATA!";
+                }
+            }
+            $doctor->img_data = $imageData;
+        }
+
+        return $doctors;
+    }
 }

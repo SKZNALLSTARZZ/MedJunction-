@@ -18,6 +18,7 @@ class PaymentResource extends JsonResource
             'name' => $this->name,
             'phone' => $this->phone,
             'img_url' => $this->img_url,
+            'img_data' => $this->img_data,
 
         ];
     }

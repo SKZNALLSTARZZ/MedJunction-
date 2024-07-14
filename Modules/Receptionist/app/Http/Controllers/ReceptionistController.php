@@ -9,14 +9,21 @@ use Illuminate\Http\RedirectResponse;
 use Modules\Receptionist\Entities\Receptionist;
 use Modules\Allergy\Http\Requests\AllergyAddRequest;
 use Modules\Allergy\Http\Requests\AllergyUpdateRequest;
+use Modules\Receptionist\Repositories\ReceptionistRepository;
 
 class ReceptionistController extends Controller
 {
+    protected $receptionistRepository;
+
+    public function __construct(ReceptionistRepository $receptionistRepository)
+    {
+        $this->receptionistRepository = $receptionistRepository;
+    }
     public function index()
     {
         try {
-            $receptionists = Receptionist::all();
-            return response()->json($receptionists, Response::HTTP_OK);
+            $receptionist = $this->receptionistRepository->all();
+            return response()->json($receptionist, Response::HTTP_OK);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }

@@ -90,7 +90,7 @@ class DoctorController extends Controller
     public function index()
     {
         try {
-            $doctors = Doctor::all();
+            $doctors = $this->doctorRepository->all();
             return response()->json($doctors, Response::HTTP_OK);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);

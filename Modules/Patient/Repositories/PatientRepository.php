@@ -121,12 +121,27 @@ class  PatientRepository{
     }
     public function getLastFivePatients()
     {
-        return Patient::join('users', 'users.id', '=', 'patients.user_id')
+        $patients = Patient::join('users', 'users.id', '=', 'patients.user_id')
             ->join('appointments', 'appointments.patient_id', '=', 'patients.id')
             ->orderBy('patients.created_at', 'desc')
             ->select('patients.id', 'patients.name', 'patients.phone', 'users.img_url', DB::raw("DATE_FORMAT(patients.created_at, '%l:%i %p') as formatted_time"))
             ->distinct()
             ->take(5)
             ->get();
+
+            foreach ($patients as $patient) {
+                $imageData = null;
+                if ($patient->img_url) {
+                    $imagePath = storage_path('app/public/uploads/' . basename($patient->img_url));
+                    if (file_exists($imagePath)) {
+                        $imageData = base64_encode(file_get_contents($imagePath));
+                    }else{
+                        $imageData = "No DATA!";
+                    }
+                }
+                $patient->img_data = $imageData;
+            }
+
+            return $patients;
     }
 }

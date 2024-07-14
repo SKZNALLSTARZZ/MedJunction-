@@ -17,5 +17,6 @@ use Modules\Payment\Http\Controllers\PaymentController;
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::apiResource('payment', PaymentController::class)->names('payment');
     Route::get('/get_Last_Five_Payments', [PaymentController::class, 'getLastFivePayments']);
+    Route::get('/get_All_Payments', [PaymentController::class, 'getAllPayments']);
     Route::get('/Count_All_Payment', [PaymentController::class, 'countAllPayment']);
 });

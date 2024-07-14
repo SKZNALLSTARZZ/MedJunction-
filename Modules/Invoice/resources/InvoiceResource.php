@@ -19,6 +19,7 @@ class InvoiceResource extends JsonResource
             'payment' => [
                 'amount' => $this->payment->amount,
             ],
+            'img_data' => $this->img_data,
         ];
     }
 }
