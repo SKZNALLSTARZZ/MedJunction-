@@ -8,11 +8,17 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Appointment\Entities\Appointment;
+use Modules\Appointment\Repositories\AppointmentRepository;
 use Modules\Appointment\Http\Requests\AppointmentAddRequest;
 use Modules\Appointment\Http\Requests\AppointmentUpdateRequest;
+use Modules\Appointment\resources\AppointmentDashboardResource;
 
 class AppointmentController extends Controller
 {
+    protected $appointmentRepository;
+    public function __construct(AppointmentRepository $appointmentRepository) {
+        $this->appointmentRepository = $appointmentRepository;
+    }
     public function index()
     {
         try {
@@ -82,5 +88,21 @@ class AppointmentController extends Controller
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
+    }
+    public function countAllAppointment()
+    {
+        try {
+            $count = $this->appointmentRepository->totalAppointmentCount();
+
+            return response()->json($count, Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+    public function getTodayAppointments(Request $request)
+    {
+        $appointments = $this->appointmentRepository->getTodayAppointments();
+
+        return AppointmentDashboardResource::collection($appointments);
     }
 }

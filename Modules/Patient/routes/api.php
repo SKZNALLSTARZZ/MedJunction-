@@ -17,6 +17,8 @@ use Modules\Patient\Http\Controllers\PatientController;
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::apiResource('patient', PatientController::class)->names('patient');
     Route::get('/Count', [PatientController::class, 'count']);
+    Route::get('/Count_All_Patient', [PatientController::class, 'countAllPatient']);
+    Route::get('/get_Last_Five_Patients', [PatientController::class, 'getFivePatients']);
     Route::get('/patientconsultations/{patientId}', [PatientController::class, 'getConsultations']);
 });
 

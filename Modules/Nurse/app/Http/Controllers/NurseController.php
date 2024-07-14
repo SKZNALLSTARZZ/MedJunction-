@@ -2,10 +2,13 @@
 
 namespace Modules\Nurse\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Modules\Nurse\Entities\Nurse;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
+use Modules\Nurse\Http\Requests\NurseAddRequest;
+use Modules\Nurse\Http\Requests\NurseUpdateRequest;
 
 class NurseController extends Controller
 {

@@ -33,7 +33,16 @@ class UserRepository
         $address = null;
         $email = $user->email;
         $role = $user->role;
-        $image = $user->img_url;
+        $imageData = null;
+        if ($user && $user->img_url) {
+            $imagePath = storage_path('app/public/uploads/' . basename($user->img_url));
+            if (file_exists($imagePath)) {
+                $imageData = base64_encode(file_get_contents($imagePath));
+            }else{
+                $imageData = "No DATA!";
+            }
+        }
+        $image = $imageData;
 
         switch ($user->role) {
             case 'patient':
@@ -44,6 +53,12 @@ class UserRepository
                     $address = $patient->address;
                 }
                 break;
+
+                case 'admin':
+                        $name = 'admin';
+
+                    break;
+
 
             case 'doctor':
                 $doctor = Doctor::where('user_id', $user->id)->first();

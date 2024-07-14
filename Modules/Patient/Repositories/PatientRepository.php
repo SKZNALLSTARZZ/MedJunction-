@@ -2,6 +2,7 @@
 namespace Modules\Patient\Repositories;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 use Modules\Patient\Entities\Patient;
 
 
@@ -65,6 +66,37 @@ class  PatientRepository{
         $currentYear = Carbon::now()->year;
         return Patient::whereYear('created_at', $currentYear)->count();
     }
+    public function totalPatientCount()
+{
+    $monthlyCounts = [];
+
+    for ($i = 0; $i < 12; $i++) {
+        $count = Patient::whereYear('created_at', Carbon::now()->subMonths($i)->year)
+                        ->whereMonth('created_at', Carbon::now()->subMonths($i)->month)
+                        ->count();
+        $monthlyCounts[] = $count;
+    }
+
+    $monthlyCounts = array_reverse($monthlyCounts);
+
+    // Calculate the percentage change between the current month and the previous month
+    $currentMonthCount = $monthlyCounts[count($monthlyCounts) - 1];
+    $previousMonthCount = $monthlyCounts[count($monthlyCounts) - 2];
+
+    if ($previousMonthCount != 0) {
+        $percentageChange = (($currentMonthCount - $previousMonthCount) / $previousMonthCount) * 100;
+    } else {
+        $percentageChange = $currentMonthCount * 100; // if previous month is 0, just return current month as percentage
+    }
+    $percentageChange = number_format($percentageChange, 2);
+    $totalCount = Patient::count();
+
+    return [
+        'monthlyCounts' => $monthlyCounts,
+        'percentageChange' => $percentageChange,
+        'totalCount' => $totalCount,
+    ];
+}
 
     public function singleByUserId($userId)
     {
@@ -86,5 +118,15 @@ class  PatientRepository{
         }
 
         return $patient;
+    }
+    public function getLastFivePatients()
+    {
+        return Patient::join('users', 'users.id', '=', 'patients.user_id')
+            ->join('appointments', 'appointments.patient_id', '=', 'patients.id')
+            ->orderBy('patients.created_at', 'desc')
+            ->select('patients.id', 'patients.name', 'patients.phone', 'users.img_url', DB::raw("DATE_FORMAT(patients.created_at, '%l:%i %p') as formatted_time"))
+            ->distinct()
+            ->take(5)
+            ->get();
     }
 }

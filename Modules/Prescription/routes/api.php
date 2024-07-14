@@ -16,4 +16,5 @@ use Modules\Prescription\Http\Controllers\PrescriptionController;
 
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::apiResource('prescription', PrescriptionController::class)->names('prescription');
+    Route::get('/Count_All_Prescription', [PrescriptionController::class, 'countAllPrescription']);
 });

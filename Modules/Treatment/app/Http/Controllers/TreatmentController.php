@@ -7,11 +7,17 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Treatment\Entities\Treatment;
+use Modules\Treatment\Resources\TreatmentResource;
+use Modules\Treatment\Repositories\TreatmentRepository;
 use Modules\Treatment\Http\Requests\TreatmentAddRequest;
 use Modules\Treatment\Http\Requests\TreatmentUpdateRequest;
 
 class TreatmentController extends Controller
 {
+    protected $treatmentRepository;
+    public function __construct(TreatmentRepository $treatmentRepository) {
+        $this->TreatmentRepository = $treatmentRepository;
+    }
     public function index()
     {
         try {
@@ -82,5 +88,17 @@ class TreatmentController extends Controller
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
+    }
+    public function getAllTreatment ()
+    {
+        $treatments = $this->TreatmentRepository->getTreatment();
+        $services = $this->TreatmentRepository->getAllServices();
+        $specialities = $this->TreatmentRepository->getAllSpecialities();
+
+        return response()->json([
+            'treatments' => TreatmentResource::collection($treatments),
+            'services' => $services,
+            'specialities' => $specialities,
+        ]);
     }
 }

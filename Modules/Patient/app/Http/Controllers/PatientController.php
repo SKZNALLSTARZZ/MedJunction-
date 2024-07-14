@@ -59,6 +59,16 @@ class PatientController extends Controller
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+    public function countAllPatient()
+    {
+        try {
+            $count = $this->patientRepository->totalPatientCount();
+
+            return response()->json($count, Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
 
     public function show(int $id)
     {
@@ -140,5 +150,12 @@ class PatientController extends Controller
         $consultations = $this->consultationRepository->getConsultationsForPatient($patientId);
 
         return ConsultationResource::collection($consultations);
+    }
+
+    public function getFivePatients(Request $request)
+    {
+        $consultations = $this->patientRepository->getLastFivePatients();
+
+        return response()->json($consultations);
     }
 }

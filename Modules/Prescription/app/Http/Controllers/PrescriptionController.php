@@ -8,11 +8,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Prescription\Entities\Prescription;
 use Modules\Prescription\Http\Requests\PrescriptionRequest;
+use Modules\Prescription\Repositories\PrescriptionRepository;
 
 class PrescriptionController extends Controller
 {
+    protected $prescriptionRepository;
+    public function __construct(PrescriptionRepository $prescriptionRepository) {
+        $this->prescriptionRepository = $prescriptionRepository;
+    }
     public function index()
     {
+
         try {
             $prescriptions = Prescription::all();
             return response()->json($prescriptions, Response::HTTP_OK);
@@ -78,6 +84,16 @@ class PrescriptionController extends Controller
             $prescription->delete();
 
             return response()->json(['message' => 'Resource deleted successfully'], Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+    public function countAllPrescription()
+    {
+        try {
+            $count = $this->prescriptionRepository->totalPrescriptionCount();
+
+            return response()->json($count, Response::HTTP_OK);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }

@@ -29,6 +29,7 @@ class LoginController extends Controller
              $credentials = $request->validate([
                  'email' => 'required|string|email',
                  'password' => 'required|string',
+
              ]);
              $remember = $request->has('remember');
 

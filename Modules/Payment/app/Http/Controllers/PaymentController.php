@@ -7,11 +7,17 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Payment\Entities\Payment;
+use Modules\Payment\Resources\PaymentResource;
+use Modules\Payment\Repositories\PaymentRepository;
 use Modules\Payment\Http\Requests\PaymentAddRequest;
 use Modules\Payment\Http\Requests\PaymentUpdateRequest;
 
 class PaymentController extends Controller
 {
+    protected $paymentRepository;
+    public function __construct(PaymentRepository $paymentRepository) {
+        $this->PaymentRepository = $paymentRepository;
+    }
     public function index()
     {
         try {
@@ -82,4 +88,21 @@ class PaymentController extends Controller
             return response()->json(['error' => $e->getMessage()], 500);
         }
     }
+    public function getLastFivePayments(Request $request)
+    {
+        $payments = $this->PaymentRepository->getLastFivePayments();
+
+        return PaymentResource::collection($payments);
+    }
+    public function countAllPayment()
+    {
+        try {
+            $count = $this->PaymentRepository->totalPaymentCount();
+
+            return response()->json($count, Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }

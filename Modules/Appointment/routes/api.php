@@ -16,5 +16,6 @@ use Modules\Appointment\Http\Controllers\AppointmentController;
 
 Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     Route::apiResource('appointment', AppointmentController::class)->names('appointment');
+    Route::get('/Count_All_Appointment', [AppointmentController::class, 'countAllAppointment']);
+    Route::get('/Today_Appointments', [AppointmentController::class, 'getTodayAppointments']);
 });
- 
