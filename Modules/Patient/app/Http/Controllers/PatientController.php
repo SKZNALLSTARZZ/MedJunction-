@@ -14,8 +14,10 @@ use Modules\User\Repositories\UserRepository;
 use Modules\Patient\resources\PatientResource;
 use Modules\Patient\Repositories\PatientRepository;
 use Modules\Patient\Http\Requests\PatientAddRequest;
+use Modules\Appointment\resources\AppointmentResource;
 use Modules\Patient\Http\Requests\PatientUpdateRequest;
 use Modules\Consultation\resources\ConsultationResource;
+use Modules\Appointment\Repositories\AppointmentRepository;
 use Modules\Consultation\Repositories\ConsultationRepository;
 use Modules\Consultation\resources\ConsultationSummaryResource;
 
@@ -26,10 +28,12 @@ class PatientController extends Controller
     protected $patientRepository;
     protected $consultationRepository;
     protected $userRepository;
-    public function __construct(PatientRepository $patienRepository, UserRepository $userRepository, ConsultationRepository $consultationRepository) {
+    protected $appointmentRepository;
+    public function __construct(PatientRepository $patienRepository, UserRepository $userRepository, ConsultationRepository $consultationRepository, AppointmentRepository $appointmentRepository) {
         $this->patientRepository = $patienRepository;
         $this->userRepository = $userRepository;
         $this->consultationRepository = $consultationRepository;
+        $this->appointmentRepository = $appointmentRepository;
     }
 
     public function index()
@@ -150,6 +154,13 @@ class PatientController extends Controller
         $consultations = $this->consultationRepository->getConsultationsForPatient($patientId);
 
         return ConsultationResource::collection($consultations);
+    }
+
+    public function getAppointments(Request $request, int $patientId)
+    {
+        $appointments = $this->appointmentRepository->getPatientAppointments($patientId);
+
+        return response()->json(AppointmentResource::collection($appointments), Response::HTTP_OK);
     }
 
     public function getFivePatients(Request $request)

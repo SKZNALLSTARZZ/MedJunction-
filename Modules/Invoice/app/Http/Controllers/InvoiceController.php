@@ -7,11 +7,21 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Modules\Invoice\Entities\Invoice;
+use Modules\Invoice\resources\InvoiceResource;
+use Modules\Invoice\Repositories\InvoiceRepository;
 use Modules\Invoice\Http\Requests\InvoiceAddRequest;
+use Modules\Invoice\resources\InvoiceDetailResource;
 use Modules\Invoice\Http\Requests\InvoiceUpdateRequest;
 
 class InvoiceController extends Controller
 {
+    protected $invoiceRepository;
+
+    public function __construct(InvoiceRepository $invoiceRepository)
+    {
+        $this->invoiceRepository = $invoiceRepository;
+    }
+
     public function index()
     {
         try {
@@ -79,6 +89,51 @@ class InvoiceController extends Controller
             $invoice->delete();
 
             return response()->json(['message' => 'Resource deleted successfully'], Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function getPatientInvoices(Request $request, int $patientId)
+    {
+        try {
+            $invoices = $this->invoiceRepository->getPaidInvoicesByPatient($patientId);
+
+            if (!$invoices) {
+                return response()->json(['error' => 'Resource not found'], Response::HTTP_NOT_FOUND);
+            }
+
+            return response()->json(InvoiceResource::collection($invoices), Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function getInvoices(Request $request)
+    {
+        try {
+            $invoices = $this->invoiceRepository->getPaidInvoices();
+
+            if (!$invoices) {
+                return response()->json(['error' => 'Resource not found'], Response::HTTP_NOT_FOUND);
+            }
+
+            return response()->json(InvoiceResource::collection($invoices), Response::HTTP_OK);
+        } catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function getInvoiceDetails($invoiceId)
+    {
+        try {
+            $invoice = $this->invoiceRepository->getInvoiceDetails($invoiceId);
+
+            if (!$invoice) {
+                return response()->json(['error' => 'Resource not found'], Response::HTTP_NOT_FOUND);
+            }
+
+            return response()->json(new InvoiceDetailResource($invoice), Response::HTTP_OK);
         } catch (Exception $e) {
             return response()->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
         }

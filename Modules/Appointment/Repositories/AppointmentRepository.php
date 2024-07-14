@@ -22,9 +22,9 @@ class AppointmentRepository
                   ->get();
     }
 
-    public function getPatientAppointments(int $doctorId)
+    public function getPatientAppointments(int $patientId)
     {
-        return Appointment::where('doctor_id', $doctorId)
+        return Appointment::where('patient_id', $patientId)
                   ->orderBy('created_at', 'desc')
                   ->with('doctor')
                   ->get();
