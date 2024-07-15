@@ -30,14 +30,14 @@ class PatientAddRequest extends FormRequest
             'phone' => 'required|string|max:20',
             //'user_id' => 'required|exists:users,id',
             'gender' => 'required|in:Male,Female',
-            'blood_group' => 'nullable|string|max:255',
             'birthdate' => 'required|date',
+            /*'blood_group' => 'nullable|string|max:255',
             'height' => 'nullable|numeric|min:0',
             'weight' => 'nullable|numeric|min:0',
             'age' => 'required|integer|min:0',
             'allergies' => 'nullable|string',
             'habits' => 'nullable|string',
-            'medical_history' => 'nullable|string',
+            'medical_history' => 'nullable|string',*/
         ];
     }
     protected function failedValidation(Validator $validator)
