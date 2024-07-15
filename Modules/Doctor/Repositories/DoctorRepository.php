@@ -18,11 +18,24 @@ class DoctorRepository
 
     public function getConsultedPatients(int $doctorId)
     {
-        return Patient::whereHas('appointments', function($query) use ($doctorId) {
+        $patients = Patient::with('user:id,email,img_url')->whereHas('appointments', function($query) use ($doctorId) {
             $query->where('doctor_id', $doctorId)
                   ->where('is_consulted', true)
                   ->whereHas('consultation');
         })->get();
+        foreach ($patients as $patient) {
+            $imageData = null;
+            if ($patient->user && $patient->user->img_url) {
+                $imagePath = storage_path('app/public/uploads/' . basename($patient->user->img_url));
+                if (file_exists($imagePath)) {
+                    $imageData = base64_encode(file_get_contents($imagePath));
+                }else{
+                    $imageData = "No DATA!";
+                }
+            }
+            $patient->img_data = $imageData;
+        }
+        return $patients;
     }
 
     public function getConsultedPatientCounts(int $doctorId)
